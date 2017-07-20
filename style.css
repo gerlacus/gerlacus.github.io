@@ -1,0 +1,242 @@
+* {
+    border: 0px solid rgba(0, 0, 0.3);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #0D0;
+    background-color: #D0C7C7;
+}
+
+h1 {
+    font-family: 'Cormorant', serif;
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: 'Cormorant', serif;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.page-banner-container {
+    /* Main banner elements: text on top of background
+     * Actual background depends on which page the banner is for */
+    height: 40rem;
+    /*background-color: #223;*/
+    text-align: center;
+    color: #FFF;
+    background-size: cover;
+}
+
+#main-page-banner {
+    background-image: url("/img/E_PDXHighway2.png");
+    height: 40rem;
+    padding: 0 5%;
+}
+
+.page-banner h1 {
+    font-style: bold;
+    font-size: 5rem;
+    padding-top: 11rem;
+    line-height: 7rem;
+}
+
+.page-banner h2 {
+    line-height: 4rem;
+    font-size: 1.5rem;
+}
+
+/*      ***NAVIGATION BAR***        */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.0);
+    position:fixed;
+    top: 0px;
+    z-index: 200;
+    width: 100%;
+    height: 3rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    color: #FFF;
+    float: right;
+    line-height: 3rem;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 1.5rem;
+}
+
+.navbar a:link, a:visited {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar a:active {
+    color: #AAA;
+}
+
+.navbar-logo {
+    display: inline-block;
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    padding: 5px;
+}
+
+
+.me-portrait-container {
+    position: absolute;
+    width: 100%;
+    top: 30rem;
+    text-align: center;
+    z-index: 100
+}
+
+.me-portrait {
+    border-radius: 100%;
+    border: 5px solid #E0D2D2;
+    display: inline;
+    left: 30%;
+    width: 20rem;
+    height: 20rem;
+}
+
+
+/*      ***TEXT SECTIONS***         */
+.text-section {
+    background-color: #E0D2D2;
+    width: 80%;
+    position:relative;
+    left: 10%;
+    text-align: center;
+    padding: 3rem 5%;
+}
+
+.text-section h1 {
+    font-style: bold;
+    font-size: 3rem;
+    padding-top: 7rem;
+    line-height: 7rem;
+    color: #503F3F;
+}
+
+.text-section h2 {
+    line-height: 3rem;
+}
+
+.text-section p {
+    color: #604F4F;
+    line-height: 2rem;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+
+/*      ***H-LAYOUTS***       */
+
+.h-layout-dark {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    /* CHANGE THIS AFTER DEBUG */
+    position: relative;
+    left: 10%;
+    height: 40rem;
+    padding-top: 2rem;
+}
+
+
+/*      ***MUSIC CONTAINERS***      */
+.mus-container-full {
+    background-color: #f00;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.mus-track-container {
+    margin: 0 auto;
+    border-radius: 3%;
+    display: inline;
+}
+
+/*      ***BUTTONS***       */
+/* Main button class */
+.button {
+    border: 2px solid;
+    /*border-radius: 0.3rem;*/
+    padding: 10px;
+    margin-top: 2rem;
+    display: inline-block;
+    -webkit-transition: all 200ms;
+}
+
+.day-button {
+    border-color: #604f4f;
+    color: #604f4f;
+}
+
+.day-button:hover {
+    background-color: #604f4f;
+    color: #e0d2d2;
+}
+
+.night-button{
+    border-color: #fff;
+    color: #fff;
+}
+
+.night-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+/*      ***PARALLAX SCROLLING BACKGROUNDS***        */
+.parallax-bg {
+    height: 40rem;
+    width: 100%;
+    margin: 0 auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#pbg-fall {
+    background-image: url("/img/testBG1.jpg");
+}
+
+#pbg-winter {
+    background-image: url("/img/testBG2.jpg");
+}
+
+#pbg-seasons {
+    background-image: url("/img/E_CampusSeasons2.jpg");
+}
+
