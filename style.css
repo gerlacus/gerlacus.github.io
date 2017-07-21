@@ -19,7 +19,7 @@ h1 {
 }
 
 h3 {
-    font-family: 'Cormorant', serif;
+    font-family: 'Caveat', serif;
     font-size: 2rem;
 }
 
@@ -31,14 +31,14 @@ h2 {
 }
 
 h4 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Bitter', sans-serif;
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
 }
 
 p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Bitter', sans-serif;
     font-size: 1rem;
 }
 
@@ -248,29 +248,31 @@ p {
 }
 
 .h-layout-inner p {
-    line-height: 1.5rem;
+    line-height: 2rem;
 }
 
 .h-layout-music {
     background-color: #414f3b;
     /*border-radius: 2rem 0 0 2rem;*/
-    padding-right: 4rem;
+    padding-right: 8rem;
+    padding-left: 1rem;
 }
 
 .h-layout-music p, .h-layout-code p {
-    text-align: center;
-    width: 70%;
+    /*text-align: justify;*/
+    /*width: 100%;*/
 }
 
 .h-layout-code {
     background-color: #363847;
     /*border-radius: 0 2rem 2rem 0;*/
-    padding-left: 4rem;
+    padding-left: 8rem;
+    padding-right: 1rem;
 }
 
 .h-layout-code p {
     position: relative;
-    left: 30%;
+    /*left: 30%;*/
 }
 
 /*      ***MUSIC CONTAINERS      */
