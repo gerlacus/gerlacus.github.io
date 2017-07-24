@@ -42,6 +42,24 @@ p {
     font-size: 1rem;
 }
 
+.h-layout-inner li {
+    font-family: 'Bitter', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    list-style-type: none;
+}
+
+.list-des {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
 .page-banner-container {
     /* Main banner elements: text on top of background
      * Actual background depends on which page the banner is for */
@@ -51,6 +69,7 @@ p {
     color: #FFF;
     background-size: cover;
     padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 #main-page-banner {
@@ -89,7 +108,6 @@ p {
     text-transform: uppercase;
     color: #FFF;
     float: right;
-    line-height: 3rem;
 }
 
 .navbar li {
@@ -193,7 +211,7 @@ p {
 }
 
 .slideshow1 img {
-    border: 5px solid #414f3b;
+    border: 8px solid #414f3b;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -201,7 +219,7 @@ p {
 }
 
 .slideshow2 img {
-    border: 5px solid #363847;
+    border: 8px solid #363847;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -212,29 +230,25 @@ p {
 
 /*      ***H-LAYOUTS       */
 .h-layout-outer {
-    width: 80%;
+    width: 88%;
+    /*border: 1px solid pink;*/
     margin-left: auto;
     margin-right: auto;
     padding-top: 2rem;
-    max-width: 70rem;
-}
-
-.h-layout-outer h1 {
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    max-width: 60rem;
+    display: flex;
 }
 
 .h-layout-inner {
     background-color: rgba(240, 213, 194, 0.3);
-    border: 0px solid pink;
     min-width: 20rem;
     min-height: 480px;
-    width: 49%;
+    width: 50%;
     padding: 0 2rem 1rem 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    /*margin-top: 19rem;*/
-    display: inline-block;
+    /*margin-left: auto;
+    margin-right: auto;*/
+    /*display: inline-block;*/
+    bottom: 0;
 }
 
 .h-layout-banner {
@@ -244,11 +258,11 @@ p {
 
 .h-layout-inner h2 {
     margin-top: 1rem;
-    margin-bottom:
+    margin-bottom: 1rem;
 }
 
 .h-layout-inner p {
-    line-height: 2rem;
+    line-height: 1.25rem;
 }
 
 .h-layout-music {
@@ -256,6 +270,8 @@ p {
     /*border-radius: 2rem 0 0 2rem;*/
     padding-right: 8rem;
     padding-left: 1rem;
+    margin-bottom: 60px;
+    text-align: left;
 }
 
 .h-layout-music p, .h-layout-code p {
@@ -268,10 +284,12 @@ p {
     /*border-radius: 0 2rem 2rem 0;*/
     padding-left: 8rem;
     padding-right: 1rem;
+    margin-top: 60px;
+    text-align: right;
 }
 
 .h-layout-code p {
-    position: relative;
+    /*position: relative;*/
     /*left: 30%;*/
 }
 
@@ -294,7 +312,7 @@ p {
     border: 2px solid;
     /*border-radius: 0.3rem;*/
     padding: 10px;
-    margin-top: 2rem;
+    margin-top: 0rem;
     display: inline-block;
     -webkit-transition: all 200ms;
 }

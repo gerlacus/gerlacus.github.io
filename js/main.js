@@ -11,12 +11,18 @@ function main() {
     //}
     //$('.navbar').css('margin', (($(window).scrollTop() / 10) + 'px'));
     //$('.navbar').css('margin', $(window).scrollTop() + 'px');
+
     $(window).on("scroll", function() {
         $('.navbar').css('background-color', ('rgba(0, 0, 0, ' + Math.min(($(window).scrollTop() / 1000), 0.7) + ')'));
     });
 
     $(window).on("resize", function() {
-        //$('.me-portrait').
+        // Set height of both boxes in "What I Do" layout to be of equal height
+        var maxHeight = Math.max($('.h-layout-music').height(), $('.h-layout-code').height());
+        console.log(maxHeight);
+        //$('.h-layout-music').height(maxHeight);
+        //$('.h-layout-code').height($('.h-layout-music').height());
+        // Set offset (top) to same for both sides of window
     });
     
     $('.slideshow1 img:gt(0)').hide();
@@ -33,19 +39,6 @@ function main() {
             .next('img').fadeIn()
             .end().appendTo('.slideshow2');
     }, 3000);
-    
-/*
-    setInterval(function() {
-        $('.slideshow img:first')
-            .fadeout(100)
-            .next()
-            .fadeIn(1000)
-            .end()
-            .appendTo('.slideshow');
-    }, 3000);
-*/           
-
-
 
 }
 
