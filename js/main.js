@@ -1,6 +1,15 @@
 function main() {
     $('.page-banner').hide();
+    $('.navbar').hide();
+    $('.text-section').css('visibility', 'hidden');
+
     $('.page-banner').fadeIn(1000);
+    setTimeout(function () {
+        $('.navbar').fadeIn(1000);
+        $('.text-section').hide();
+        $('.text-section').css('visibility', 'visible');
+        $('.text-section').fadeIn(1000);
+    }, 1000);
 
     $(window).on("scroll", function() {
         $('.navbar').css('background-color', ('rgba(0, 0, 0, ' + Math.min((($(window).scrollTop() - 75) / 500), 0.7) + ')'));

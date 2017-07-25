@@ -121,6 +121,7 @@ ul {
     color: #fff;
 }
 
+
 .navbar li a:hover {
     text-decoration: underline;
     color: #fff;
@@ -203,11 +204,11 @@ ul {
     font-size: 1rem;
     text-align: justify;
     font-family: 'Bitter', serif;
+    margin-bottom: 1rem;
 }
 
 
 /*      ***SLIDESHOWS        */
-
 .slideshow2 {
     position: relative;
     bottom: 240px;
@@ -340,9 +341,12 @@ ul {
     -webkit-transition: all 200ms;
 }
 
-.day-button {
+/*.button a:link, a:visited {*/
+
+.day-button, .day-button:link, .day-button:visited {
     border-color: #604f4f;
     color: #604f4f;
+    text-decoration: none;
 }
 
 .day-button:hover {
@@ -350,9 +354,10 @@ ul {
     color: #e0d2d2;
 }
 
-.night-button{
+.night-button, .night-button:link, .night-button:visited {
     border-color: #fff;
     color: #fff;
+    text-decoration: none;
 }
 
 .night-button:hover {
