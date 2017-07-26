@@ -1,3 +1,11 @@
+function resizeElements() {
+    // Portrait
+    $('.me-portrait-container').css('top', 41.1 - ($('.me-portrait-container img').width()/28) + 'rem');
+    // Text section
+    $('.text-section .text-below-portrait').css('padding-top', (-4 + $('.me-portrait-container img').width()/28) + 'rem');
+}
+
+
 function main() {
     $('.page-banner').hide();
     $('.navbar').hide();
@@ -9,21 +17,13 @@ function main() {
         $('.text-section').hide();
         $('.text-section').css('visibility', 'visible');
         $('.text-section').fadeIn(1000);
-    }, 1000);
+    }, 500);
 
     $(window).on("scroll", function() {
         $('.navbar').css('background-color', ('rgba(0, 0, 0, ' + Math.min((($(window).scrollTop() - 75) / 500), 0.7) + ')'));
     });
 
-    $(window).on("resize", function() {
-        // Set height of both boxes in "What I Do" layout to be of equal height
-        var maxHeight = Math.max($('.h-layout-music').height(), $('.h-layout-code').height());
-        console.log(maxHeight);
-        //$('.h-layout-music').height(maxHeight);
-        //$('.h-layout-code').height($('.h-layout-music').height());
-        // Set offset (top) to same for both sides of window
-    });
-    
+    $(window).on("resize", resizeElements);
     // Slideshows for main page
     // Hide images
     $('.slideshow1 img:gt(0)').hide();
