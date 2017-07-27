@@ -66,22 +66,64 @@ ul {
     width: 90%;
     max-width: 70rem;
     background-color: rgba(255, 255, 255, 0.1);
-    margin: 0 auto;
+    margin: 0.75rem auto; 
+    padding-bottom: 2rem;
 }
 
+.dark-text-container p {
+    text-align: justify;
+    margin: 0rem 2rem;
+    line-height: 2rem;
+}
+
+.dark-text-container h1 {
+    padding-top: 1rem;
+    margin: 0;
+}
+
+.dark-text-container h2 {
+    text-align: left;
+    margin: 2rem 0 0rem 5rem;
+}
+
+.dark-text-container .first-h2 {
+    text-align: left;
+    margin: 0 0 0 5rem;
+}
+
+
 /* Video */
-.embed-vid {
+.embed-vid-1 {
     width: 50%;
-    margin: 1rem 1rem 1rem 0;
+    margin: 2rem 2rem 0.5rem 0;
     border: 3px solid rgba(0, 0, 0, 0.7);
+    min-height: 15rem;
+}
+
+.embed-vid-2 {
+    width: 50%;
+    margin: 2rem 0 0.5rem 2rem;
+    border: 3px solid rgba(0, 0, 0, 0.7);
+    min-height: 15rem;
 }
 
 /* Description next to video */
-.h-layout-inner-2 {
+.h-layout-inner-2a, .h-layout-inner-2b {
     width: 50%;
     line-height: 2.5rem;
     padding: 1rem;
 }
+
+.h-layout-inner-2a h2, .h-layout-inner-2b h2 {
+    text-align: left;
+}
+
+.h-layout-inner-2a p, .h-layout-inner-2b p {
+    margin-top: 1rem;
+    text-align: justify;
+    padding: 0 1rem;
+}
+
 
 .page-banner-container {
     /* Main banner elements: text on top of background
@@ -448,19 +490,45 @@ footer p {
     max-width: 70rem;
 }
 
-/* Social media buttons + container */
+/* Social media buttons + container + mask*/
 .soc-med-tray {
     list-style-type: none;
     width: 80%;
+    height: 4rem;
     display: inline-block;
-    margin: 3rem auto 1rem auto;
+    margin: 1rem 0 0 0;
 }
 
-.soc-med-button img {
+.soc-med-tray a {
+    font-size: 0rem;
+}
+
+.soc-med-tray img {
     width: 2rem;
     height: 2rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    margin: 1rem 0.5rem;
+    -webkit-transition: all 200ms;
+    position: relative;
+    top: 0.25rem;
+}
+
+.soc-med-tray img:hover {
+    color: #000;
+    width: 3rem;
+    height: 3rem;
+    margin-top: 0rem;
+    position: relative;
+    top: 0.75rem;
+}
+
+.footer-first-p {
+    margin-top: 0.5rem;
+}
+
+.mask {
+    height: 0.25rem;
+    position: relative;
+    bottom: 0.3rem;
 }
 
 /*      ***PARALLAX SCROLLING BACKGROUNDS        */
@@ -472,7 +540,7 @@ footer p {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
 #pbg-fall {

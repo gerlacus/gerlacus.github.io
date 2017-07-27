@@ -3,6 +3,9 @@ function resizeElements() {
     $('.me-portrait-container').css('top', 41.1 - ($('.me-portrait-container img').width()/28) + 'rem');
     // Text section
     $('.text-section .text-below-portrait').css('padding-top', (-4 + $('.me-portrait-container img').width()/28) + 'rem');
+    $('.embed-vid-1').css('height', (0 + $('.h-layout-inner-2a p').height()/14) + 'rem');
+    $('.embed-vid-2').css('height', (-4 + $('.h-layout-inner-2b p').height()/14) + 'rem');
+    //$('.embed-vid').css('height', (0 + $('.embed-vid').prev().height()/14) + 'rem');
 }
 
 
@@ -10,6 +13,8 @@ function main() {
     $('.page-banner').hide();
     $('.navbar').hide();
     $('.text-section').css('visibility', 'hidden');
+
+    resizeElements();
 
     $('.page-banner').fadeIn(1000);
     setTimeout(function () {
