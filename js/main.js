@@ -8,7 +8,7 @@ function resizeElements() {
     //$('.embed-vid').css('height', (0 + $('.embed-vid').prev().height()/14) + 'rem');
 }
 
-
+ 
 function main() {
     $('.page-banner').hide();
     $('.navbar').hide();
