@@ -91,6 +91,13 @@ ul {
     margin: 0 0 0 5rem;
 }
 
+.dark-text-container p a:hover {
+    color: #0f0;
+}
+
+.dark-text-container p a:visited {
+    /*color: #f00;*/
+}
 
 /* Video */
 .embed-vid-1 {
@@ -560,4 +567,63 @@ footer p {
 
 #pbg-hike {
     background-image: url("/img/E_HikeLyons.png");
+}
+
+
+/* Smartphone display */
+@media only screen and (max-width: 778px) {
+    html {
+        font-size: 20px;
+    }
+
+    /*"What I Do" layouts (home)*/
+    .h-layout-outer {
+        display: block;
+    }
+
+    .h-layout-inner {
+        width: 90%;
+        margin: 2rem auto 0 auto;
+        padding-top: 0.25rem;
+    }
+
+    .h-layout-inner {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .h-layout-inner li, p, h2{
+        width: 100%;
+    }
+
+
+    .h-layout-music {
+        background-color: rgba(0, 0, 0, 0);
+        background-image: -moz-linear-gradient(right, rgba(65, 79, 59, 0) 0%, rgba(65, 79, 59, 0.9) 100%);
+        background-image: -o-linear-gradient(right, rgba(65, 79, 59, 0) 0%, rgba(65, 79, 59, 0.9) 100%);
+        background-image: -webkit-gradient(linear, right, left, color-stop(0, rgba(65, 79, 59, 0.9)), color-stop(0.65, rgb(65, 79, 59)));
+        background-image: -ms-linear-gradient(right, rgba(65, 79, 59, 0) 0%, rgba(65, 79, 59, 0.9) 100%);
+        background-image: -webkit-linear-gradient(right, rgba(65, 79, 59, 0) 0%, rgba(65, 79, 59, 0.9) 100%);
+    }
+
+    .h-layout-code {
+        background-color: rgba(0, 0, 0, 0);
+        background-image: -moz-linear-gradient(left, rgba(54, 56, 71, 0) 0%, rgba(54, 56, 71, 0.9) 100%);
+        background-image: -o-linear-gradient(left, rgba(54, 56, 71, 0) 0%, rgba(54, 56, 71, 0.9) 100%);
+        background-image: -webkit-gradient(linear, left, right, color-stop(0, rgba(54, 56, 71, 0.9)), color-stop(0.65, rgb(54, 56, 71)));
+        background-image: -ms-linear-gradient(left, rgba(54, 56, 71, 0) 0%, rgba(54, 56, 71, 0.9) 100%);
+        background-image: -webkit-linear-gradient(left, rgba(54, 56, 71, 0) 0%, rgba(54, 56, 71, 0.9) 100%);
+    }
+
+    /*TODO: work on expanding text across entire section*/
+
+    /*Slideshows*/
+    .slideshow1, .slideshow2 {
+        display: none;
+    }
+
+    .slideshow1 img, .slideshow2 img {
+        display: none;
+    }
+
 }
