@@ -784,7 +784,6 @@ hr {
 
     /* LANDSCAPE */
     .navbar ul {
-        border: 1px solid rgba(255, 255, 255, 0.3);
         width: 95%;
         max-width: 40rem;
         text-align: center;
