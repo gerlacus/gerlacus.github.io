@@ -625,10 +625,11 @@ hr {
         max-width: 29rem;
         text-align: center;
         display: inline-block;
-        margin-left: 20%;
+        margin-left: auto;
         margin-right: auto;
         position: relative;
         top: -0.9rem;
+        left: 2rem;
         line-height: 1rem;
         min-width: 15rem;
     }
@@ -636,7 +637,7 @@ hr {
     .navbar li {
         font-size: 2.25rem;
         padding: 0.2rem;
-        margin: 0.1rem 0.25rem;
+        margin: 0.1rem 1rem;
     }
 
     /* Footer + inner footer */
