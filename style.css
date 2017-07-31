@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+*:not(.me-portrait-container){
+    -webkit-transition: all 200ms;
+}
+
 body {
     color: #0D0;
     background-color: #e8c6ab;
@@ -601,12 +605,12 @@ hr {
     /* Navbar */
     .navbar {
     display: inline-block;
-    height: 7rem;
+    height: 5rem;
     }
 
     .navbar-logo {
-    width: 6rem;
-    height: 6rem;
+    width: 4rem;
+    height: 4rem;
     margin: 0.5rem;
     position: fixed;
     }
@@ -620,8 +624,9 @@ hr {
         text-align: center;
         margin-left: 10%;
         margin-right: 0%;
+        line-height: 0rem;
         position: relative;
-        top: 0.5rem;
+        top: 0.20rem;
     }
 
     /* Footer + inner footer */
@@ -640,11 +645,14 @@ hr {
         padding-bottom: 1rem;
     }
 
-
     .navbar li {
         width: 15%;
         font-size: 2rem;
         margin: 0 1rem;
+    }
+
+    .text-section p {
+        font-size: 1.25rem;
     }
 
 /* Social media buttons + container + mask*/

@@ -4,7 +4,7 @@ function main() {
     $('.navbar').hide();
     $('.text-section').css('visibility', 'hidden');
 
-    resizeElements();
+    resizeElements(false);
 
     $('.page-banner').fadeIn(1000);
     setTimeout(function () {
@@ -40,10 +40,11 @@ function main() {
 }
 
 
-function resizeElements() {
+function resizeElements(repeated) {
     var remSize = $('html').css('font-size').replace('px', '');
+    console.log("resized");
     // Portrait
-    $('.me-portrait-container').css('top', 40 - ($('.me-portrait-container img').width()/(remSize*2)) + 'rem');
+    $('.me-portrait-container').css('top', 40 - ($('.me-portrait').width()/(remSize*2)) + 'rem');
     // Text section
     $('.text-section .text-below-portrait').css('padding-top', (-4 + $('.me-portrait-container img').width()/(remSize*2)) + 'rem');
     $('.embed-vid-1').css('height', (0 + $('.h-layout-inner-2a p').height()/14) + 'rem');
@@ -53,6 +54,12 @@ function resizeElements() {
     // Re-hide slideshow images
     $('.slideshow1 img:gt(0)').hide();
     $('.slideshow2 img:gt(0)').hide();
+
+    if (repeated) {
+        setTimeout(resizeElements, 200);
+    } else {
+        return;
+    }
 }
 
 
