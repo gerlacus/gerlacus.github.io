@@ -483,7 +483,7 @@ footer {
     background-color: #29201a;
     color: #6b5b53;
     text-align: center;
-    height: 13rem;
+    /*height: 13rem;*/
     width: 100%;
 }
 
@@ -624,11 +624,64 @@ hr {
         top: 0.5rem;
     }
 
+    /* Footer + inner footer */
+    footer {
+        padding-bottom: 1rem;
+    }
+
+    footer p {
+        font-size: 1em;
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .footer-column {
+        margin: 0 auto;
+        padding-bottom: 1rem;
+    }
+
+
     .navbar li {
         width: 15%;
         font-size: 2rem;
         margin: 0 1rem;
     }
+
+/* Social media buttons + container + mask*/
+.soc-med-tray {
+    list-style-type: none;
+    width: 100%;
+    height: 6rem;
+    display: inline-block;
+    margin: 1rem 0 0 0;
+}
+
+.soc-med-tray a {
+    font-size: 0rem;
+}
+
+.soc-med-tray img {
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    -webkit-transition: all 200ms;
+    position: relative;
+    top: 0.25rem;
+}
+
+.soc-med-tray img:hover {
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+    top: 0;
+}
+
+
+/* Do anything with this? */
+.footer-first-p {
+    margin-top: 0.5rem;
+}
+
 
     /* "What I Do" layouts (home)*/
     .h-layout-outer {
