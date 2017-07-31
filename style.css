@@ -595,12 +595,20 @@ hr {
     only screen and (min-resolution: 180dpi) {
 
     html {
-        font-size: 20px;
+        font-size: 24px;
     }
 
     /* Navbar */
     .navbar {
-    display: flex;
+    display: inline-block;
+    height: 7rem;
+    }
+
+    .navbar-logo {
+    width: 6rem;
+    height: 6rem;
+    margin: 0.5rem;
+    position: fixed;
     }
 
     .navbar-logo-text {
@@ -608,16 +616,18 @@ hr {
     }
 
     .navbar ul {
-        font-size: 0.75rem;
         width: 100%;
         text-align: center;
-        margin-left: 0%;
-        margin-right: 4%;
+        margin-left: 10%;
+        margin-right: 0%;
+        position: relative;
+        top: 0.5rem;
     }
 
     .navbar li {
         width: 15%;
-        margin: 0;
+        font-size: 2rem;
+        margin: 0 1rem;
     }
 
     /* "What I Do" layouts (home)*/
@@ -670,11 +680,12 @@ hr {
 
     /* Banner header */
     .page-banner h1 {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
     .page-banner h2 {
-        font-size: 1.25rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
     }
 
 }
