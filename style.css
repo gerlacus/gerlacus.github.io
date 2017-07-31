@@ -621,7 +621,6 @@ hr {
     }
 
     .navbar ul {
-        border: 1px solid rgba(255, 255, 255, 0.3);
         max-width: 29rem;
         text-align: center;
         display: inline-block;
@@ -778,10 +777,12 @@ hr {
     position: fixed;
     }
 
+    /* LANDSCAPE */
     .navbar-logo-text {
         display: none;
     }
 
+    /* LANDSCAPE */
     .navbar ul {
         border: 1px solid rgba(255, 255, 255, 0.3);
         width: 95%;
@@ -796,9 +797,10 @@ hr {
         display: block;
     }
 
+    /* LANDSCAPE */
     .navbar li {
         font-size: 1.5rem;
-        margin: 0;
+        margin: 1rem;
     }
 
 }
