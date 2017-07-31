@@ -605,7 +605,7 @@ hr {
 
     /* Navbar */
     .navbar {
-    height: 3.5rem;
+    height: 4rem;
     display: flex;
     }
 
@@ -622,21 +622,21 @@ hr {
 
     .navbar ul {
         border: 1px solid rgba(255, 255, 255, 0.3);
-        max-width: 26rem;
+        max-width: 29rem;
         text-align: center;
         display: inline-block;
         margin-left: 20%;
         margin-right: auto;
         position: relative;
-        top: -1rem;
+        top: -0.9rem;
         line-height: 1rem;
         min-width: 15rem;
     }
 
     .navbar li {
-        font-size: 2rem;
+        font-size: 2.25rem;
         padding: 0.2rem;
-        margin: 0.1rem 0.1rem;
+        margin: 0.1rem 0.25rem;
     }
 
     /* Footer + inner footer */
