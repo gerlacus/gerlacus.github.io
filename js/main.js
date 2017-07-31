@@ -55,6 +55,7 @@ function resizeElements(repeated) {
     $('.slideshow1 img:gt(0)').hide();
     $('.slideshow2 img:gt(0)').hide();
 
+
     if (repeated) {
         setTimeout(resizeElements, 200);
     } else {

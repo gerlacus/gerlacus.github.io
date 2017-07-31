@@ -13,7 +13,7 @@
 body {
     color: #0D0;
     background-color: #e8c6ab;
-    min-width: 414px;
+    min-width: 480px;
 }
 
 h1 {
@@ -348,7 +348,7 @@ ul {
 }
 
 .h-layout-inner {
-    min-width: 20rem;
+    min-width: 10rem;
     min-height: 480px;
     width: 50%;
     padding: 0 2rem 1rem 2rem;
@@ -604,14 +604,14 @@ hr {
 
     /* Navbar */
     .navbar {
-    display: inline-block;
-    height: 5rem;
+    height: 3.5rem;
+    display: flex;
     }
 
     .navbar-logo {
-    width: 4rem;
-    height: 4rem;
-    margin: 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0;
     position: fixed;
     }
 
@@ -620,19 +620,22 @@ hr {
     }
 
     .navbar ul {
-        width: 100%;
+        max-width: 18rem;
         text-align: center;
-        margin-left: 10%;
-        margin-right: 0%;
-        line-height: 0rem;
+        display: block;
+        margin-left: 20%;
+        margin-right: auto;
         position: relative;
-        top: 0.20rem;
+        top: -1rem;
+        line-height: 1rem;
+        min-width: 15rem;
     }
 
     .navbar li {
-        width: 15%;
-        font-size: 2rem;
-        margin: 0 1rem;
+        /*border: 1px solid rgba(255, 255, 255, 0.3);*/
+        font-size: 1.3rem;
+        padding: 0.2rem;
+        margin: 0.1rem 0.1rem;
     }
 
     /* Footer + inner footer */
@@ -684,7 +687,6 @@ hr {
         position: relative;
         top: 0;
     }
-
 
 
     /* "What I Do" layouts (home)*/
@@ -753,15 +755,23 @@ hr {
         /*background-color: #00f;*/
     }
 
+    /* LANDSCAPE */
+    body {
+        min-width: 720px;
+    }
+
+    /* LANDSCAPE */
     .navbar {
-    display: inline-block;
+    display: flex;
+    height: 2rem;
+    min-width: 720px;
     }
 
     /* LANDSCAPE */
     .navbar-logo {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 0.25rem;
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
     position: fixed;
     }
 
@@ -770,27 +780,22 @@ hr {
     }
 
     .navbar ul {
-        text-align: left;
-        margin-left: 0;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        width: 95%;
+        max-width: 40rem;
+        text-align: center;
+        margin-left: auto;
         margin-right: 0;
-        line-height: 0rem;
+        line-height: 1rem;
         position: relative;
-        top: 0.20rem;
-    }
-
-    .navbar .two-menu {
-        width: 40%;
-        background-color: #f00;
-    }
-
-    .navbar .three-menu {
-        width: 6%;
-        background-color: #f00;
+        padding: 0;
+        top: -0.75rem;
+        display: block;
     }
 
     .navbar li {
-        font-size: 2rem;
-        margin: 0 1rem;
+        font-size: 1.5rem;
+        margin: 0;
     }
 
 }
