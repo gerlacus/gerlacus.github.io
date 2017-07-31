@@ -185,6 +185,7 @@ ul {
     list-style-type: none;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
+    font-size: 0.9rem;
     line-height: 0.5rem;
     color: #FFF;
     float: right;
@@ -221,11 +222,11 @@ ul {
 .navbar-logo-text, .navbar-logo-text:link, .navbar-logo-text:visited, .navbar-logo-text:hover {
     font-family: "Caveat", cursive;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 0.5rem;
     margin: 0 auto;
     position: relative;
-    bottom: 0.7rem;
+    bottom: 0.75rem;
     right: 0.1rem;
     /*color: #bcacac;*/
     color: rgba(255, 255, 255, 0.5);
@@ -254,7 +255,6 @@ ul {
 
 
 /*      ***TEXT SECTIONS         */
-
 .text-section {
     background-color: #f0d5c2;
     width: 80%;
@@ -535,10 +535,21 @@ footer p {
     margin-top: 0.5rem;
 }
 
+/* Mask area of link that surpasses icon bounds so user cannot accidentally click*/
 .mask {
     height: 0.25rem;
     position: relative;
     bottom: 0.3rem;
+}
+
+
+/* Horizontal line separator */
+hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 1rem 10%;
+    padding: 0;
 }
 
 /*      ***PARALLAX SCROLLING BACKGROUNDS        */
@@ -571,12 +582,45 @@ footer p {
 
 
 /* Smartphone display */
-@media only screen and (max-width: 778px) {
+/*
+@media only screen 
+    and (max-width: 778px),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) {
+*/
+@media only screen 
+    and (max-width: 778px),
+    only screen and (min-resolution: 120dpi) {
+
     html {
         font-size: 20px;
     }
 
-    /*"What I Do" layouts (home)*/
+    /* Navbar */
+    .navbar {
+    display: flex;
+    }
+
+    .navbar-logo-text {
+        display: none;
+    }
+
+    .navbar ul {
+        font-size: 0.75rem;
+        width: 100%;
+        text-align: center;
+        margin-left: 0%;
+        margin-right: 4%;
+    }
+
+    .navbar li {
+        width: 15%;
+        margin: 0;
+    }
+
+    /* "What I Do" layouts (home)*/
     .h-layout-outer {
         display: block;
     }
@@ -592,7 +636,7 @@ footer p {
         padding: 1rem;
     }
 
-    .h-layout-inner li, p, h2{
+    .h-layout-inner li, p, h2 {
         width: 100%;
     }
 
@@ -615,8 +659,6 @@ footer p {
         background-image: -webkit-linear-gradient(left, rgba(54, 56, 71, 0) 0%, rgba(54, 56, 71, 0.9) 100%);
     }
 
-    /*TODO: work on expanding text across entire section*/
-
     /*Slideshows*/
     .slideshow1, .slideshow2 {
         display: none;
@@ -624,6 +666,15 @@ footer p {
 
     .slideshow1 img, .slideshow2 img {
         display: none;
+    }
+
+    /* Banner header */
+    .page-banner h1 {
+        font-size: 4rem;
+    }
+
+    .page-banner h2 {
+        font-size: 1.25rem;
     }
 
 }
