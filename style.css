@@ -609,17 +609,20 @@ hr {
     display: flex;
     }
 
+    /* PORTRAIT */
     .navbar-logo {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4rem;
+    height: 4rem;
     margin: 0;
     position: fixed;
     }
 
+    /* PORTRAIT */
     .navbar-logo-text {
         display: none;
     }
 
+    /* PORTRAIT */
     .navbar ul {
         max-width: 29rem;
         text-align: center;
@@ -633,12 +636,14 @@ hr {
         min-width: 15rem;
     }
 
+    /* PORTRAIT */
     .navbar li {
         font-size: 2.25rem;
         padding: 0.2rem;
         margin: 0.1rem 1rem;
     }
 
+    /* PORTRAIT */
     /* Footer + inner footer */
     footer {
         padding-bottom: 1rem;
