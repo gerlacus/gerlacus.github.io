@@ -592,7 +592,7 @@ hr {
 */
 @media only screen 
     and (max-width: 778px),
-    only screen and (min-resolution: 120dpi) {
+    only screen and (min-resolution: 180dpi) {
 
     html {
         font-size: 20px;
