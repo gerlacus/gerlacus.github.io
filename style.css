@@ -122,7 +122,7 @@ ul {
 .h-layout-inner-2a, .h-layout-inner-2b {
     width: 50%;
     line-height: 2.5rem;
-    padding: 1rem;
+    padding: 0;
 }
 
 .h-layout-inner-2a h2, .h-layout-inner-2b h2 {
@@ -130,9 +130,9 @@ ul {
 }
 
 .h-layout-inner-2a p, .h-layout-inner-2b p {
-    margin-top: 1rem;
-    text-align: justify;
-    padding: 0 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
 }
 
 
@@ -198,6 +198,7 @@ ul {
 .navbar li {
     display: inline-block;
     margin: 0 1rem;
+    color: rgba(255, 255, 255, 0);
 }
 
 .navbar li a:link, a:visited {
@@ -849,7 +850,6 @@ hr {
     only screen and (max-device-width: 736px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     * {
         /*background-color: #00f;*/
-        border: 1px solid lime;
     }
 
     html {
@@ -883,7 +883,6 @@ hr {
 
     /* LANDSCAPE */
     .navbar ul {
-        border: 2px solid pink;
         width: 95%;
         max-width: 40rem;
         text-align: center;
@@ -892,9 +891,21 @@ hr {
         line-height: 1rem;
         position: relative;
         padding: 0;
-        top: -0.75rem;
+        top: -0.5rem;
         display: block;
     }
+
+    /* LANDSCAPE */
+    .navbar li {
+        font-size: 1.5rem;
+        margin: 0 0.75rem;
+        color: #0f0;
+    }
+
+.navbar li a:link, a:visited {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+}
 
     /* LANDSCAPE */
     .button-container {
@@ -920,10 +931,5 @@ hr {
         top: 0;
     }
 
-    /* LANDSCAPE */
-    .navbar li {
-        font-size: 1.5rem;
-        margin: 0 0.5rem;
-    }
 
 }
