@@ -794,7 +794,7 @@ hr {
 
     /* PORTRAIT */
     .button h4 {
-        font-size: 3rem;
+        font-size: 2em;
         line-height: 6rem;
     }
 
@@ -808,6 +808,18 @@ hr {
     .button-contained-right {
         width: 100%;
         text-align: center;
+    }
+
+    /* PORTRAIT */
+    .dark-text-container h1 {
+        padding-top: 1rem;
+        padding-bottom: 0;
+        margin: 0;
+    }
+
+    .h-layout-outer {
+        border: 1px solid lime;
+        padding-top: 0rem;
     }
 
 }
