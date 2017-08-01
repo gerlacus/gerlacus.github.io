@@ -767,6 +767,14 @@ hr {
         line-height: 2.5rem;
     }
 
+    .button-container {
+        min-height: 6rem;
+    }
+
+    .button {
+        border-radius: 1rem;
+    }
+
     .button h4 {
         font-size: 3rem;
     }
