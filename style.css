@@ -778,28 +778,34 @@ hr {
         line-height: 2.5rem;
     }
 
+    /* PORTRAIT */
     .button-container {
         min-height: 4rem;
-        position: relative;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
     }
 
+    /* PORTRAIT */
     .button {
         border-radius: 1rem;
-        position: relative;
     }
 
+    /* PORTRAIT */
     .button h4 {
         font-size: 3rem;
     }
 
+    /* PORTRAIT */
     .button-contained-left {
-        position: relative;
-        max-width: 100%;
+        text-align: center;
+        width: 100%;
     }
 
+    /* PORTRAIT */
     .button-contained-right {
-        position: relative;
-        max-width: 100%;
+        width: 100%;
+        text-align: center;
     }
 
 }
