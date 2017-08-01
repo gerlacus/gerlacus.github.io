@@ -670,14 +670,23 @@ hr {
 
     /* PORTRAIT */
     .footer-column {
+        width: 95%;
         margin: 0 auto;
         padding-bottom: 1rem;
     }
 
 
     /* PORTRAIT */
+
+    .text-section {
+        width: 90%;
+        padding: 3rem 0.5rem 2rem 0.5rem;
+    }
+
     .text-section p {
         font-size: 2rem;
+        text-align: center;
+        line-height: 2rem;
     }
 
     /* Social media buttons + container + mask*/
@@ -717,6 +726,7 @@ hr {
     /* "What I Do" layouts (home)*/
     .h-layout-outer {
         display: block;
+        width: 100%;
     }
 
     /* PORTRAIT */
@@ -796,6 +806,7 @@ hr {
     .button h4 {
         font-size: 2em;
         line-height: 6rem;
+        margin: 0 1.5rem;
     }
 
     /* PORTRAIT */
@@ -818,7 +829,6 @@ hr {
     }
 
     .h-layout-outer {
-        border: 1px solid lime;
         padding-top: 0rem;
     }
 
