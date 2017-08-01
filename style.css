@@ -813,12 +813,25 @@ hr {
     .button-contained-left {
         text-align: center;
         width: 100%;
+        /* TEST: gradient other way? */
+        background-image: -o-linear-gradient(left, rgba(135, 149, 129, 0) 50%, rgba(135, 149, 129, 0.3) 100%);
+        background-image: -webkit-gradient(linear, left, right, color-stop(0.5, rgba(135, 149, 129, 0)), color-stop(1, rgba(135, 149, 129, 0.3)));
+        background-image: -ms-linear-gradient(left, rgba(135, 149, 129, 0) 50%, rgba(135, 149, 129, 0.3) 100%);
+        background-image: -webkit-linear-gradient(left, rgba(135, 149, 129, 0) 50%, rgba(135, 149, 129, 0.3) 100%);
+        background-image: -moz-linear-gradient(left, rgba(135, 149, 129, 0) 50%, rgba(135, 149, 129, 0.3) 100%);
     }
 
     /* PORTRAIT */
     .button-contained-right {
         width: 100%;
         text-align: center;
+        background-image: -o-linear-gradient(right, rgba(124, 126, 141, 0) 50%, rgba(124, 126, 141, 0.3) 100%);
+        background-image: -webkit-gradient(linear, right, left, color-stop(0.5, rgba(124, 126, 141, 0)), color-stop(1, rgba(124, 126, 141, 0.3)));
+        background-image: -ms-linear-gradient(right, rgba(124, 126, 141, 0) 50%, rgba(124, 126, 141, 0.3) 100%);
+        background-image: -webkit-linear-gradient(right, rgba(124, 126, 141, 0) 50%, rgba(124, 126, 141, 0.3) 100%);
+        background-image: -moz-linear-gradient(right, rgba(124, 126, 141, 0) 50%, rgba(124, 126, 141, 0.3) 100%);
+65, 79, 59, 0
+54, 56, 71, 0
     }
 
     /* PORTRAIT */
