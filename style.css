@@ -603,6 +603,7 @@ hr {
         font-size: 24px;
     }
 
+    /* PORTRAIT */
     /* Navbar */
     .navbar {
     height: 4rem;
@@ -649,20 +650,23 @@ hr {
         padding-bottom: 1rem;
     }
 
+    /* PORTRAIT */
     footer p {
         font-size: 1em;
         width: 90%;
         margin-bottom: 1rem;
     }
 
+    /* PORTRAIT */
     .footer-column {
         margin: 0 auto;
         padding-bottom: 1rem;
     }
 
 
+    /* PORTRAIT */
     .text-section p {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 
     /* Social media buttons + container + mask*/
@@ -674,10 +678,12 @@ hr {
         margin: 1rem 0 0 0;
     }
 
+    /* PORTRAIT */
     .soc-med-tray a {
         font-size: 0rem;
     }
 
+    /* PORTRAIT */
     .soc-med-tray img {
         width: 5rem;
         height: 5rem;
@@ -687,6 +693,7 @@ hr {
         top: 0.25rem;
     }
 
+    /* PORTRAIT */
     .soc-med-tray img:hover {
         width: 5rem;
         height: 5rem;
@@ -695,27 +702,31 @@ hr {
     }
 
 
+    /* PORTRAIT */
     /* "What I Do" layouts (home)*/
     .h-layout-outer {
         display: block;
     }
 
+    /* PORTRAIT */
     .h-layout-inner {
         width: 90%;
         margin: 2rem auto 0 auto;
         padding-top: 0.25rem;
     }
 
+    /* PORTRAIT */
     .h-layout-inner {
         width: 95%;
         padding: 1rem;
     }
 
+    /* PORTRAIT */
     .h-layout-inner li, p, h2 {
         width: 100%;
     }
 
-
+    /* PORTRAIT */
     .h-layout-music {
         background-color: rgba(0, 0, 0, 0);
         background-image: -moz-linear-gradient(right, rgba(65, 79, 59, 0) 0%, rgba(65, 79, 59, 0.9) 100%);
@@ -725,6 +736,7 @@ hr {
         background-image: -webkit-linear-gradient(right, rgba(65, 79, 59, 0) 0%, rgba(65, 79, 59, 0.9) 100%);
     }
 
+    /* PORTRAIT */
     .h-layout-code {
         background-color: rgba(0, 0, 0, 0);
         background-image: -moz-linear-gradient(left, rgba(54, 56, 71, 0) 0%, rgba(54, 56, 71, 0.9) 100%);
@@ -739,6 +751,7 @@ hr {
         display: none;
     }
 
+    /* PORTRAIT */
     .slideshow1 img, .slideshow2 img {
         display: none;
     }
@@ -748,9 +761,14 @@ hr {
         font-size: 5rem;
     }
 
+    /* PORTRAIT */
     .page-banner h2 {
         font-size: 2rem;
         line-height: 2.5rem;
+    }
+
+    .button h4 {
+        font-size: 3rem;
     }
 
 }
