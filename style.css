@@ -373,10 +373,12 @@ ul {
     position: relative;
 }
 
+.h-layout-inner li {
+    word-wrap: break-word;
+}
+
 .h-layout-music {
-    /*background-color: #414f3b;*/
     background-color: rgba(255, 255, 255, 0.1);
-    /*border-radius: 2rem 0 0 2rem;*/
     /* In order: Firefox, Opera, Webkit(Safari/Chrome 10), Webkit(Chrome 11+), IE */
     background-image: -moz-linear-gradient(left, rgba(65, 79, 59, 0) 0%, rgb(65, 79, 59) 65%);
     background-image: -o-linear-gradient(left, rgba(65, 79, 59, 0) 0%, rgb(65, 79, 59) 65%);
@@ -444,8 +446,6 @@ ul {
     display: inline-block;
     -webkit-transition: all 200ms;
 }
-
-/*.button a:link, a:visited {*/
 
 .day-button, .day-button:link, .day-button:visited {
     border-color: #604f4f;
@@ -517,7 +517,8 @@ footer p {
     font-size: 0rem;
 }
 
-.soc-med-tray img {
+
+
 .button-contained-left {
     position: absolute;
     bottom: 0;
@@ -529,6 +530,9 @@ footer p {
     bottom: 0;
     right: 0;
 }
+
+
+.soc-med-tray img {
     width: 2rem;
     height: 2rem;
     margin: 1rem 0.5rem;
@@ -558,7 +562,7 @@ footer p {
 }
 
 
-/* Horizontal line separator */
+/* Horizontal line separator + "stretcher" */
 hr {
     height: 1px;
     border: 0;
@@ -596,19 +600,12 @@ hr {
 }
 
 
-/* Smartphone display */
-/*
-@media only screen 
-    and (max-width: 778px),
-    only screen and (min--moz-device-pixel-ratio: 2),
-    only screen and (-o-min-device-pixel-ratio: 2/1),
-    only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min-device-pixel-ratio: 2) {
-*/
-@media only screen and (max-width: 778px),
-    only screen and (max-width: 1280px) and (max-height: 720px) and (orientation: landscape),
-    only screen and (max-device-width: 667px) and (max-device-height: 375px) and (orientation:portrait) and (device-pixel-ratio: 2),
-    only screen and (min-resolution: 180dpi) {
+/* SMARTPHONE DISPLAYS */
+
+/* PORTRAIT MODE */
+@media 
+    only screen and (max-width: 736px),
+    only screen and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 
     html {
         font-size: 24px;
@@ -847,11 +844,16 @@ hr {
 
 }
 
-/* For phone in landscape mode */
-@media only screen and (max-device-width: 1280px) and (max-device-height: 720px) and (orientation: landscape) and (min-resolution: 100dpi),
-    only screen and (max-device-width: 720px) and (max-device-height: 480px) and (orientation: landscape) and (device-pixel-ratio: 2) {
+/* LANDSCAPE MODE */
+@media
+    only screen and (max-device-width: 736px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     * {
         /*background-color: #00f;*/
+        border: 1px solid lime;
+    }
+
+    html {
+        font-size: 20px;
     }
 
     /* LANDSCAPE */
@@ -881,16 +883,41 @@ hr {
 
     /* LANDSCAPE */
     .navbar ul {
+        border: 2px solid pink;
         width: 95%;
         max-width: 40rem;
         text-align: center;
         margin-left: auto;
-        margin-right: 0;
+        margin-right: auto;
         line-height: 1rem;
         position: relative;
         padding: 0;
         top: -0.75rem;
         display: block;
+    }
+
+    /* LANDSCAPE */
+    .button-container {
+        border: 2px solid pink;
+        bottom: 0;
+        left: 0;
+    }
+
+    /* LANDSCAPE */
+    .soc-med-tray img {
+        width: 3rem;
+        height: 3rem;
+        margin: 1rem 0.5rem;
+        -webkit-transition: all 200ms;
+        position: relative;
+        top: 0.25rem;
+    }
+
+    .soc-med-tray img:hover {
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        top: 0;
     }
 
     /* LANDSCAPE */
