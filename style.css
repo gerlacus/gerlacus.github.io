@@ -780,20 +780,22 @@ hr {
 
     /* PORTRAIT */
     .button-container {
-        min-height: 4rem;
+        min-height: 6rem;
         width: 100%;
         text-align: center;
-        margin: 0 auto;
+        margin: 1rem auto 0 auto;
     }
 
     /* PORTRAIT */
     .button {
         border-radius: 1rem;
+        min-height: 6rem;
     }
 
     /* PORTRAIT */
     .button h4 {
         font-size: 3rem;
+        line-height: 6rem;
     }
 
     /* PORTRAIT */
