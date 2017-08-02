@@ -649,8 +649,8 @@ hr {
     /* PORTRAIT */
     .navbar li {
         font-size: 2.25rem;
-        padding: 0.2rem;
-        margin: 0.1rem 1rem;
+        padding: 0.3rem 0 0.3rem 0;
+        margin: 0.1rem 0.5rem;
     }
 
     /* PORTRAIT */
@@ -719,6 +719,14 @@ hr {
         top: 0;
     }
 
+    /* PORTRAIT */
+    /* Music/code(?) paragraphs from flex to normal */
+    .h-layout-outer-full-width {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
 
     /* PORTRAIT */
     /* "What I Do" layouts (home)*/
@@ -847,7 +855,9 @@ hr {
 
 /* LANDSCAPE MODE */
 @media
-    only screen and (max-device-width: 736px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    only screen and (min-width: 737px) and (max-width: 1000px) and (-webkit-max-device-pixel-ratio: 1),
+    only screen and (min-device-width: 737px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-width: 499px) and (max-device-width: 736px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     * {
         /*background-color: #00f;*/
     }
@@ -902,14 +912,13 @@ hr {
         color: #0f0;
     }
 
-.navbar li a:link, a:visited {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.9);
-}
+    .navbar li a:link, a:visited {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.9);
+    }
 
     /* LANDSCAPE */
     .button-container {
-        border: 2px solid pink;
         bottom: 0;
         left: 0;
     }
@@ -930,6 +939,60 @@ hr {
         position: relative;
         top: 0;
     }
+
+    .h-layout-inner {
+    
+    }
+
+    /* LANDSCAPE */
+    /* 'What I Do' section fixes */
+    .h-layout-music {
+        padding-right: 1rem;
+        margin-bottom: 300px;
+    }
+
+    /* LANDSCAPE */
+    .h-layout-code {
+        padding-left: 1rem;
+        margin-top: 300px;
+    }
+
+    /* LANDSCAPE */
+.slideshow2 {
+    position: relative;
+    bottom: 240px;
+}
+
+
+.slideshow1 img, .slideshow2 img {
+    position: absolute;
+    display: inline;
+    /*margin: 0 5%;*/
+    object-fit: cover;
+    width: 45%;
+    height: 300px;
+    z-index: 102;
+}
+
+.slideshow1 img {
+    border-radius: 0 75% 0 0;
+    border: 8px solid #414f3b;
+    left: 43%;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slideshow2 img {
+    border-radius: 0 0 0 75%;
+    border: 8px solid #363847;
+    left: 0;
+    right: 43%;
+    top: -60px;
+    margin-left: auto;
+    margin-right: auto;
+    /*position: relative;*/
+}
 
 
 }
