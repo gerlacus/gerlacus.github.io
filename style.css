@@ -706,7 +706,7 @@ hr {
     .text-section p {
         font-size: 2rem;
         text-align: center;
-        line-height: 2rem;
+        line-height: 3rem;
     }
 
     /* Social media buttons + container + mask*/
@@ -889,6 +889,7 @@ hr {
         margin: 0;
         text-align: justify;
         padding: 0 1rem 1rem 1rem;
+        line-height: 2rem;
     }
 
     .dark-text-container h2 {
