@@ -1,6 +1,6 @@
 @charset "UTF-8";
 * {
-    border: 0px solid rgba(0, 0, 0.3);
+    border: 0px solid pink;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -76,7 +76,7 @@ ul {
 
 .dark-text-container p {
     text-align: justify;
-    margin: 0rem 2rem;
+    margin: 0rem 2rem 1rem 2rem;
     line-height: 2rem;
 }
 
@@ -90,30 +90,29 @@ ul {
     margin: 2rem 0 0rem 5rem;
 }
 
-.dark-text-container .first-h2 {
-    text-align: left;
-    margin: 0 0 0 5rem;
+.dark-text-container p a {
+    color: #fff;
 }
 
 .dark-text-container p a:hover {
-    color: #0f0;
+    color: #cdf;
 }
 
 .dark-text-container p a:visited {
-    /*color: #f00;*/
 }
 
 /* Video */
 .embed-vid-1 {
     width: 50%;
-    margin: 2rem 2rem 0.5rem 0;
+    height: 1rem;
+    margin: 1rem 4rem 1rem 0;
     border: 3px solid rgba(0, 0, 0, 0.7);
-    min-height: 15rem;
+    max-height: 25rem;
 }
 
 .embed-vid-2 {
     width: 50%;
-    margin: 2rem 0 0.5rem 2rem;
+    margin: 1rem 0 1rem 4rem;
     border: 3px solid rgba(0, 0, 0, 0.7);
     min-height: 15rem;
 }
@@ -130,11 +129,18 @@ ul {
 }
 
 .h-layout-inner-2a p, .h-layout-inner-2b p {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 1rem;
     text-align: center;
 }
 
+.h-layout-inner-2a p {
+    text-align: right;
+}
+
+.h-layout-inner-2b p {
+    text-align: left;
+}
 
 .page-banner-container {
     /* Main banner elements: text on top of background
@@ -345,7 +351,13 @@ ul {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    display: -webkit-flex;
     display: flex;
+}
+
+.h-layout-outer-full-width-2 {
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .h-layout-inner {
@@ -418,16 +430,25 @@ ul {
 }
 
 /*      ***MUSIC CONTAINERS      */
-.mus-container-full {
-    background-color: #f00;
-    width: 50%;
-    margin: 0 auto;
+.mus-track-container {
+    display: flex;
+    width: 100%;
+    top: 0.25rem;
+    padding: 1rem;
+    margin-top: 1rem;
 }
 
-.mus-track-container {
-    margin: 0 auto;
-    border-radius: 3%;
-    display: inline;
+.mus-track-container h2 {
+    margin-top: 0;
+    width: 20rem;
+}
+
+.mus-track-container audio {
+    width: 60%;
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 4.5rem;
+    padding-bottom: 0.25rem;
 }
 
 /*      ***BUTTONS       */
@@ -606,7 +627,7 @@ hr {
 /* PORTRAIT MODE */
 @media 
     only screen and (max-width: 736px),
-    only screen and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    only screen and (max-device-width: 736px) and (min-resolution: 2dppx) and (orientation: portrait) {
 
     html {
         font-size: 24px;
@@ -681,6 +702,7 @@ hr {
         padding: 3rem 0.5rem 2rem 0.5rem;
     }
 
+    /* PORTRAIT */
     .text-section p {
         font-size: 2rem;
         text-align: center;
@@ -851,13 +873,78 @@ hr {
         padding-top: 0rem;
     }
 
+    /* Music page layouts: vids + h-layouts */
+    /* PORTRAIT */
+    .h-layout-outer-full-width {
+        display: block;
+    }
+
+    /* PORTRAIT */
+    .h-layout-inner-2a, .h-layout-inner-2b {
+        width: 100%;
+    }
+
+    /* PORTRAIT */
+    .dark-text-container p {
+        margin: 0;
+        text-align: justify;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .dark-text-container h2 {
+        margin: 0;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    /* PORTRAIT */
+    .h-layout-inner-2a p, .h-layout-inner-2b p {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        text-align: center;
+
+    }
+
+    /* PORTRAIT */
+    .embed-vid-1, .embed-vid-2 {
+        max-height: 20rem;
+        margin: 0 auto 1rem auto;
+        width: 80%;
+    }
+
+    /* PORTRAIT */
+    /*      ***MUSIC CONTAINERS      */
+    .mus-track-container {
+        display: block;
+        width: 100%;
+        top: 0.25rem;
+        padding: 0;
+        margin-top: 0rem;
+    }
+
+        /* PORTRAIT */
+    .mus-track-container h2 {
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+        /* PORTRAIT */
+    .mus-track-container audio {
+        width: 80%;
+        margin: 0;
+        padding: 0;
+    }
+
+
 }
 
 /* LANDSCAPE MODE */
 @media
-    only screen and (min-width: 737px) and (max-width: 1000px) and (-webkit-max-device-pixel-ratio: 1),
-    only screen and (min-device-width: 737px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (min-device-width: 499px) and (max-device-width: 736px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    only screen and (min-width: 737px) and (max-width: 1000px) and (max-resolution: 1dppx),
+    only screen and (min-device-width: 737px) and (max-width: 1024px) and (orientation: portrait) and (min-resolution: 2dppx),
+    only screen and (min-device-width: 499px) and (max-device-width: 736px) and (orientation: landscape) and (min-resolution: 2dppx) {
     * {
         /*background-color: #00f;*/
     }
@@ -993,6 +1080,75 @@ hr {
     margin-right: auto;
     /*position: relative;*/
 }
+    /* Music page layouts: vids + h-layouts */
+    /* LANDSCAPE */
+    .h-layout-outer-full-width {
+        display: block;
+    }
+
+    /* LANDSCAPE */
+    .h-layout-inner-2a, .h-layout-inner-2b {
+        width: 100%;
+    }
+
+
+    /* LANDSCAPE */
+    .dark-text-container p {
+        margin: 0;
+        text-align: justify;
+        padding: 0 2rem 1rem 2rem;
+    }
+
+    /* LANDSCAPE */
+    .h-layout-inner-2a p, .h-layout-inner-2b p {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        text-align: center;
+    }
+
+    .dark-text-container h2 {
+        margin: 0;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    /* LANDSCAPE 
+    .h-layout-inner-2a p, .h-layout-inner-2b p {
+
+    } */
+
+    /* LANDSCAPE */
+    .embed-vid-1, .embed-vid-2 {
+        margin: 0;
+        margin-bottom: 0.5rem;
+        min-height: 20rem;
+        width: 80%;
+    }
+
+    /* LANDSCAPE */
+    /*      ***MUSIC CONTAINERS      */
+    .mus-track-container {
+        display: block;
+        width: 100%;
+        top: 0.25rem;
+        padding: 0;
+        margin-top: 0rem;
+    }
+
+        /* LANDSCAPE */
+    .mus-track-container h2 {
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+        /* LANDSCAPE */
+    .mus-track-container audio {
+        width: 80%;
+        margin: 0;
+        padding: 0;
+    }
 
 
 }

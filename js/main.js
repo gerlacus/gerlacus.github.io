@@ -66,8 +66,9 @@ function resizeElements(repeated) {
     $('.text-section .text-below-portrait').css('padding-top', (-4 + $('.me-portrait-container img').width()/(remSize*2)) + 'rem');
 
     // Video resizing
-    $('.embed-vid-1').css('height', (($('.h-layout-inner-2a p').height()/14) - 8) + 'rem');
-    $('.embed-vid-2').css('height', (($('.h-layout-inner-2b p').height()/14) - 8) + 'rem');
+    var video1 = document.querySelector('.embed-vid-1');
+    $('.embed-vid-1').css('height',((($('.h-layout-inner-2a p').height())/remSize) + 2) + 'rem');
+    $('.embed-vid-2').css('height',((($('.h-layout-inner-2b p').height())/remSize) + 2) + 'rem');
 
     // Re-hide slideshow images
     $('.slideshow1 img:gt(0)').hide();
