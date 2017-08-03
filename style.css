@@ -90,6 +90,24 @@ ul {
     margin: 2rem 0 0rem 5rem;
 }
 
+.dark-text-container h4 {
+    font-family: 'Bitter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: none;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.dark-text-container .mus-quote {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
 .dark-text-container p a, .dark-text-container h2 a {
     color: #fff;
 }
@@ -609,7 +627,7 @@ hr {
 .sc-embed {
     height: 407px;
     width: 90%;
-    margin-top: 2rem;
+    margin: 1rem 0;
     background-color: #00f;
 }
 
@@ -635,6 +653,7 @@ hr {
 /* PORTRAIT MODE */
 @media 
     only screen and (max-width: 736px),
+    only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait),
     only screen and (max-device-width: 736px) and (min-resolution: 2dppx) and (orientation: portrait) {
 
     html {
@@ -911,7 +930,6 @@ hr {
         padding-left: 3rem;
         padding-right: 3rem;
         text-align: center;
-
     }
 
     /* PORTRAIT */
@@ -953,6 +971,7 @@ hr {
 @media
     only screen and (min-width: 737px) and (max-width: 1000px) and (max-resolution: 1dppx),
     only screen and (min-device-width: 737px) and (max-width: 1024px) and (orientation: portrait) and (min-resolution: 2dppx),
+    only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape),
     only screen and (min-device-width: 499px) and (max-device-width: 736px) and (orientation: landscape) and (min-resolution: 2dppx) {
     * {
         /*background-color: #00f;*/
