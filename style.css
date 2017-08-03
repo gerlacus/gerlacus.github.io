@@ -605,6 +605,14 @@ hr {
     padding-bottom: 2rem;
 }
 
+/* Soundcloud playlist on 'music' page */
+.sc-embed {
+    height: 407px;
+    width: 90%;
+    margin-top: 2rem;
+    background-color: #00f;
+}
+
 #pbg-fall {
     background-image: url("/img/testBG1.jpg");
 }
