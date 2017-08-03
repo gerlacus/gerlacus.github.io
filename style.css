@@ -163,7 +163,6 @@ ul {
 .page-banner-container {
     /* Main banner elements: text on top of background
      * Actual background depends on which page the banner is for */
-    /*height: 40rem;*/
     /*background-color: #223;*/
     text-align: center;
     color: #FFF;
@@ -180,6 +179,12 @@ ul {
 
 #music-page-banner {
     background-image: url("/img/E_PDXTryon.png");
+    height: 40rem;
+    padding: 0 5%;
+}
+
+#about-page-banner {
+    background-image: url("/img/E_Howdy2.png");
     height: 40rem;
     padding: 0 5%;
 }
@@ -647,6 +652,9 @@ hr {
     background-image: url("/img/E_HikeLyons.png");
 }
 
+#pbg-howdy {
+    background-image: url("/img/E_Howdy2.png");
+}
 
 /* SMARTPHONE DISPLAYS */
 
