@@ -19,6 +19,7 @@ var lastScTop = 0;
         // Set menu transparency based on how close to top (closer to top = more faded)
         $('.navbar').css('background-color', ('rgba(0, 0, 0, ' + Math.min((($(window).scrollTop() - 75) / 500), 0.7) + ')'));
         // Set menu transparency according to whether scrolled up or down (up = "awake" and opaque, down = faded)
+        /*
         // Scroll up -> opaque
         var scTop = $(this).scrollTop();
         console.log('scTop: ', scTop);
@@ -31,6 +32,7 @@ var lastScTop = 0;
             $('.navbar li a').css('color', 'rgba(255, 255, 255, 0.8)');
         }
         lastScTop = scTop;
+        */
     });
 
     $(window).on("resize", resizeElements);

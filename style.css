@@ -6,8 +6,8 @@
     box-sizing: border-box;
 }
 
-*:not(.me-portrait-container){
-    -webkit-transition: all 200ms;
+*:not(.me-portrait-container) {
+    transition: width 200ms, height 200ms, size 200ms;
 }
 
 body {
@@ -972,7 +972,7 @@ hr {
         /* PORTRAIT */
     .mus-track-container audio {
         width: 80%;
-        margin: 0;
+        margin-top: 0.5rem;
         padding: 0;
     }
 
@@ -1186,7 +1186,7 @@ hr {
         /* LANDSCAPE */
     .mus-track-container audio {
         width: 80%;
-        margin: 0;
+        margin-top: 0.5rem;
         padding: 0;
     }
 
