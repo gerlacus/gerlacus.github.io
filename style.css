@@ -71,7 +71,7 @@ ul {
     max-width: 70rem;
     background-color: rgba(255, 255, 255, 0.1);
     margin: 0.75rem auto; 
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .dark-text-container p {
@@ -219,7 +219,7 @@ ul {
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     font-size: 0.9rem;
-    line-height: 0.5rem;
+    line-height: 0.3rem;
     color: #FFF;
     float: right;
 }
@@ -538,7 +538,7 @@ footer {
 
 footer p {
     font-size: 0.75em;
-    margin: 1rem;
+    /*margin: 1rem 1rem 0rem 1rem;*/
 }
 
 .footer-column {
@@ -547,6 +547,7 @@ footer p {
     height: 100%;
     margin: 0 auto;
     max-width: 70rem;
+    padding: 1rem;
 }
 
 /* Social media buttons + container + mask*/
@@ -656,6 +657,10 @@ hr {
     background-image: url("/img/E_Howdy2.png");
 }
 
+#pbg-dock1 {
+    background-image: url("/img/E_Dock1.png");
+}
+
 /* SMARTPHONE DISPLAYS */
 
 /* PORTRAIT MODE */
@@ -712,7 +717,6 @@ hr {
     /* PORTRAIT */
     /* Footer + inner footer */
     footer {
-        padding-bottom: 1rem;
     }
 
     /* PORTRAIT */
@@ -1021,7 +1025,7 @@ hr {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        line-height: 1rem;
+        line-height: 0.8rem;
         position: relative;
         padding: 0;
         top: -0.5rem;
