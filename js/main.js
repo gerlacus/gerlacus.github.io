@@ -65,7 +65,7 @@ function resizeElements(repeated) {
     // Portrait
     $('.me-portrait-container').css('top', 40 - ($('.me-portrait').width()/(remSize*2)) + 'rem');
     // Text section
-    $('.text-section .text-below-portrait').css('padding-top', (-4 + $('.me-portrait-container img').width()/(remSize*2)) + 'rem');
+    $('.text-section .text-below-portrait').css('padding-top', (-3 + $('.me-portrait-container img').width()/(remSize*2)) + 'rem');
 
     // Video resizing
     var video1 = document.querySelector('.embed-vid-1');

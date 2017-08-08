@@ -1,6 +1,6 @@
 @charset "UTF-8";
 * {
-    border: 0px solid pink;
+    border: 0px solid blue;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -311,7 +311,7 @@ ul {
     font-style: bold;
     font-size: 3rem;
     padding-top: 7rem;
-    line-height: 7rem;
+    line-height: 6rem;
     color: #502a2a;
 }
 
