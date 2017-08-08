@@ -178,13 +178,21 @@ ul {
 }
 
 #music-page-banner {
-    background-image: url("/img/E_PDXTryon.png");
+    /*background-image: url("/img/E_PDXTryon.png");*/
+    background-image: url("/img/E_LonelyBench2.png");
     height: 40rem;
     padding: 0 5%;
 }
 
 #about-page-banner {
     background-image: url("/img/E_Howdy2.png");
+    height: 40rem;
+    padding: 0 5%;
+}
+
+#code-page-banner {
+    background-image: url("/img/E_PDXBridge4.jpg");
+    background-image: url("/img/E_SeattleB3.jpg");
     height: 40rem;
     padding: 0 5%;
 }
@@ -358,7 +366,6 @@ ul {
     margin-right: auto;
     /*position: relative;*/
 }
-
 
 /*      ***H-LAYOUTS       */
 .h-layout-outer {
@@ -659,6 +666,10 @@ hr {
 
 #pbg-dock1 {
     background-image: url("/img/E_Dock1.png");
+}
+
+#pbg-bridge2 {
+    background-image: url("/img/E_PDXBridgeB2.jpg");
 }
 
 /* SMARTPHONE DISPLAYS */
