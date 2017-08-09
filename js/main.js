@@ -40,22 +40,50 @@ var lastScTop = 0;
     // Hide images
     $('.slideshow1 img:gt(0)').hide();
     $('.slideshow2 img:gt(0)').hide();
+    $('.slideshow-code-1 img:gt(0)').hide();
 
     // Slideshow 1
     setInterval(function() {
-            $('.slideshow1 :first-child').fadeOut()
-                .next('img').fadeIn()
+            $('.slideshow1 :first-child').fadeOut(1000)
+                .next('img').fadeIn(1000)
                 .end().appendTo('.slideshow1');
     }, 3000);
     
     // Slideshow 2
+    // TEST: offset?
+    setTimeout( function() {
     setInterval(function() {
-        $('.slideshow2 :first-child').fadeOut()
-            .next('img').fadeIn()
-            .end().appendTo('.slideshow2');
+            $('.slideshow2 :first-child').fadeOut(1000)
+                .next('img').fadeIn(1000)
+                .end().appendTo('.slideshow2');
+        }, 3000);
+    }, 1500);
+
+    // Code slideshow
+    /*
+    setInterval(function() {
+            $('.slideshow-code-1 :first-child')
+                .fadeOut()
+                .next('img').css('position', 'absolute')
+                .fadeIn()
+                .end()
+                .appendTo('.slideshow-code-1');
     }, 3000);
+    */
 
+    setInterval(function() {
+            // Fade current image out
+            $('.slideshow-code-1 :first-child').css('width', ($('.slideshow-code-1').width() + 'px'));
+            $('.slideshow-code-1 :first-child').css('height', ($('.slideshow-code-1').height() + 'px'));
+            $('.slideshow-code-1 :first-child').fadeOut(1000);
 
+            // Fade next image in
+            var nextImg = $('.slideshow-code-1 :first-child').next('img');
+            nextImg.css('width', ($('.slideshow-code-1').width() + 'px'));
+            nextImg.css('height', ($('.slideshow-code-1').height() + 'px'));
+            nextImg.fadeIn(1000);
+            nextImg.end().appendTo('.slideshow-code-1');
+    }, 3000);
 
 }
 
@@ -75,6 +103,13 @@ function resizeElements(repeated) {
     // Re-hide slideshow images
     $('.slideshow1 img:gt(0)').hide();
     $('.slideshow2 img:gt(0)').hide();
+
+
+    $('.slideshow-code-1 :first-child').css('width', ($('.slideshow-code-1').width() + 'px'));
+    $('.slideshow-code-1 :first-child').css('height', ($('.slideshow-code-1').height() + 'px'));
+    var nextImg = $('.slideshow-code-1 :first-child').next('img');
+    nextImg.css('width', ($('.slideshow-code-1').width() + 'px'));
+    nextImg.css('height', ($('.slideshow-code-1').height() + 'px'));
 
 
     if (repeated) {
