@@ -382,7 +382,7 @@ ul {
     height: 30rem;
     width: 100%;
     z-index: 102;
-    border: 3px solid rgba(255, 255, 255, 0.1);
+    border: 0px solid rgba(255, 255, 255, 0.1);
     transition: none;
 }
 
