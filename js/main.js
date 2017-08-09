@@ -41,48 +41,48 @@ var lastScTop = 0;
     $('.slideshow1 img:gt(0)').hide();
     $('.slideshow2 img:gt(0)').hide();
     $('.slideshow-code-1 img:gt(0)').hide();
+    $('.slideshow-code-2 img:gt(0)').hide();
 
     // Slideshow 1
     setInterval(function() {
-            $('.slideshow1 :first-child').fadeOut(1000)
-                .next('img').fadeIn(1000)
+            $('.slideshow1 :first-child').fadeOut(500)
+                .next('img').fadeIn(500)
                 .end().appendTo('.slideshow1');
     }, 3000);
     
     // Slideshow 2
-    // TEST: offset?
     setTimeout( function() {
-    setInterval(function() {
-            $('.slideshow2 :first-child').fadeOut(1000)
-                .next('img').fadeIn(1000)
-                .end().appendTo('.slideshow2');
+        setInterval(function() {
+                $('.slideshow2 :first-child').fadeOut(500)
+                    .next('img').fadeIn(500)
+                    .end().appendTo('.slideshow2');
         }, 3000);
     }, 1500);
 
-    // Code slideshow
-    /*
     setInterval(function() {
-            $('.slideshow-code-1 :first-child')
-                .fadeOut()
-                .next('img').css('position', 'absolute')
-                .fadeIn()
-                .end()
-                .appendTo('.slideshow-code-1');
-    }, 3000);
-    */
-
-    setInterval(function() {
-            // Fade current image out
+            // Fade current image out (1)
             $('.slideshow-code-1 :first-child').css('width', ($('.slideshow-code-1').width() + 'px'));
             $('.slideshow-code-1 :first-child').css('height', ($('.slideshow-code-1').height() + 'px'));
-            $('.slideshow-code-1 :first-child').fadeOut(1000);
+            $('.slideshow-code-1 :first-child').fadeOut(500);
 
-            // Fade next image in
-            var nextImg = $('.slideshow-code-1 :first-child').next('img');
-            nextImg.css('width', ($('.slideshow-code-1').width() + 'px'));
-            nextImg.css('height', ($('.slideshow-code-1').height() + 'px'));
-            nextImg.fadeIn(1000);
-            nextImg.end().appendTo('.slideshow-code-1');
+            // Fade current image out (2)
+            $('.slideshow-code-2 :first-child').css('width', ($('.slideshow-code-2').width() + 'px'));
+            $('.slideshow-code-2 :first-child').css('height', ($('.slideshow-code-2').height() + 'px'));
+            $('.slideshow-code-2 :first-child').fadeOut(500);
+
+            // Fade next image in (1)
+            var nextImg1 = $('.slideshow-code-1 :first-child').next('img');
+            nextImg1.css('width', ($('.slideshow-code-1').width() + 'px'));
+            nextImg1.css('height', ($('.slideshow-code-1').height() + 'px'));
+            nextImg1.fadeIn(500);
+            nextImg1.end().appendTo('.slideshow-code-1');
+
+            // Fade next image in (2)
+            var nextImg2 = $('.slideshow-code-2 :first-child').next('img');
+            nextImg2.css('width', ($('.slideshow-code-2').width() + 'px'));
+            nextImg2.css('height', ($('.slideshow-code-2').height() + 'px'));
+            nextImg2.fadeIn(500);
+            nextImg2.end().appendTo('.slideshow-code-2');
     }, 3000);
 
 }
@@ -104,12 +104,19 @@ function resizeElements(repeated) {
     $('.slideshow1 img:gt(0)').hide();
     $('.slideshow2 img:gt(0)').hide();
 
-
+    // Code slideshow 1
     $('.slideshow-code-1 :first-child').css('width', ($('.slideshow-code-1').width() + 'px'));
     $('.slideshow-code-1 :first-child').css('height', ($('.slideshow-code-1').height() + 'px'));
-    var nextImg = $('.slideshow-code-1 :first-child').next('img');
-    nextImg.css('width', ($('.slideshow-code-1').width() + 'px'));
-    nextImg.css('height', ($('.slideshow-code-1').height() + 'px'));
+    var nextImg1 = $('.slideshow-code-1 :first-child').next('img');
+    nextImg1.css('width', ($('.slideshow-code-1').width() + 'px'));
+    nextImg1.css('height', ($('.slideshow-code-1').height() + 'px'));
+
+    // Code slideshow 2
+    $('.slideshow-code-2 :first-child').css('width', ($('.slideshow-code-2').width() + 'px'));
+    $('.slideshow-code-2 :first-child').css('height', ($('.slideshow-code-2').height() + 'px'));
+    var nextImg2 = $('.slideshow-code-2 :first-child').next('img');
+    nextImg2.css('width', ($('.slideshow-code-2').width() + 'px'));
+    nextImg2.css('height', ($('.slideshow-code-2').height() + 'px'));
 
 
     if (repeated) {

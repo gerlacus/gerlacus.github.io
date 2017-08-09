@@ -42,10 +42,24 @@ h4 {
     text-transform: uppercase;
 }
 
-p {
+p, .dark-text-container li {
     font-family: 'Bitter', sans-serif;
     font-size: 1rem;
 }
+
+.dark-text-container li {
+    text-align: left;
+    margin-left: 10%;
+    padding: 0.2rem 1rem;
+    line-height: 1.5rem;
+}
+
+.dark-text-container .inner-bullet {
+    text-align: left;
+    margin-left: 20%;
+    padding: 0.2rem 1rem;
+}
+
 
 .h-layout-inner li {
     font-family: 'Bitter', sans-serif;
@@ -367,7 +381,7 @@ ul {
     /*position: relative;*/
 }
 
-.slideshow-code-1 {
+.slideshow-code-1, .slideshow-code-2 {
     height: 30rem;
     text-align: left;
     width: 70%;
@@ -375,7 +389,7 @@ ul {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.slideshow-code-1 img {
+.slideshow-code-1 img, .slideshow-code-2 img {
     display: inline;
     position: absolute;
     object-fit: contain;
@@ -402,6 +416,8 @@ ul {
     margin-right: auto;
     display: -webkit-flex;
     display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .h-layout-outer-full-width-2 {
@@ -817,6 +833,8 @@ hr {
         margin-left: auto;
         margin-right: auto;
         display: block;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     /* PORTRAIT */
@@ -871,12 +889,12 @@ hr {
     }
 
     /* PORTRAIT */
-    .slideshow-code-1 {
+    .slideshow-code-1, .slideshow-code-2 {
         height: 25rem;
         width: 100%;
     }
 
-    .slideshow-code-1 img {
+    .slideshow-code-1 img, .slideshow-code-2 img {
         border-left: none;
         border-right: none;
     }
@@ -893,8 +911,8 @@ hr {
 
     /* PORTRAIT */
     .page-banner h2 {
-        font-size: 2rem;
-        line-height: 2.5rem;
+        font-size: 1.5rem;
+        line-height: 3rem;
     }
 
     /* PORTRAIT */
@@ -956,10 +974,11 @@ hr {
 
     /* Music page layouts: vids + h-layouts */
     /* PORTRAIT */
+    /*
     .h-layout-outer-full-width {
         display: block;
     }
-
+*/
     /* PORTRAIT */
     .h-layout-inner-2a, .h-layout-inner-2b {
         width: 100%;
@@ -1086,6 +1105,14 @@ hr {
         color: rgba(255, 255, 255, 0.9);
     }
 
+
+    /* Page banner header */
+    /* LANDSCAPE */
+    .page-banner h2 {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
     /* LANDSCAPE */
     .button-container {
         bottom: 0;
@@ -1166,18 +1193,20 @@ hr {
     }
 
     /* LANDSCAPE */
-    .slideshow-code-1 {
+    .slideshow-code-1, .slideshow-code-2 {
         height: 20rem;
         width: 70%;
     }
 
-    .slideshow-code-1 img {
+    .slideshow-code-1 img, .slideshow-code-2 img {
     }
 
     /* Music page layouts: vids + h-layouts */
     /* LANDSCAPE */
     .h-layout-outer-full-width {
         display: block;
+        padding-left: 2%;
+        padding-right: 2%;
     }
 
     /* LANDSCAPE */
