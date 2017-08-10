@@ -42,6 +42,8 @@ h4 {
     text-transform: uppercase;
 }
 
+
+
 p, .dark-text-container li {
     font-family: 'Bitter', sans-serif;
     font-size: 1rem;
@@ -205,8 +207,13 @@ ul {
 }
 
 #code-page-banner {
-    background-image: url("/img/E_PDXBridge4.jpg");
     background-image: url("/img/E_SeattleB3.jpg");
+    height: 40rem;
+    padding: 0 5%;
+}
+
+#contact-page-banner {
+    background-image: url("/img/E_PDXTryon.png");
     height: 40rem;
     padding: 0 5%;
 }
@@ -344,6 +351,23 @@ ul {
 
 .text-section a:visited, a:link {
     color: #604f4f;
+}
+
+/* Contact info box */
+.contact-box {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #502a2a;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    margin: 2rem 10% 0 10%;
+}
+
+.contact-box h2 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-box p {
+    font-size: 1rem;
 }
 
 /*      ***SLIDESHOWS        */
@@ -779,6 +803,15 @@ hr {
         padding-bottom: 1rem;
     }
 
+    /* PORTRAIT */
+    .contact-box {
+        margin: 0rem;
+    }
+
+    /* PORTRAIT */
+    .contact-box p {
+        font-size: 1rem;
+    }
 
     /* PORTRAIT */
 
@@ -1274,6 +1307,8 @@ hr {
     }
 
     /* LANDSCAPE */
-    /* Code slideshows */
+    .contact-box {
+        margin: 3rem 2rem 0 2rem;
+    }
 
 }
