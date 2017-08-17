@@ -25,8 +25,8 @@
         </div>
         <div class="text-section">
             <h1 class="text-below-portrait">Overview</h1>
-            <p>(((TODO: REVISE THIS ROUGH DRAFT))) My first foray into computer science was as a middle school student, enamored by the computer games I'd been playing since I was a young child. Using GameMaker's drag-and-drop interface to create code blocks, I learned the basics of conditionals, loops, and event-based programming.</p>
-            <p>It wasn't until many years later when I was preparing for college that I seriously began to consider the prospect of pursuing computer science as a career. The final day of freshman orientation, I was given the opportunity to change my major one more time before it would become a much more difficult process further into a degree track; I decided on (somewhat of) a whim that I'd do it -- I switched my major from linguistics to computer science. Three years down the line, I couldn't be more satisfied with my choice.</p>
+            <p>My first foray into computer science was as a middle school student; enamored by the computer games I'd been playing since I was a young child, I began using GameMaker's drag-and-drop interface to create code blocks to power my own rudimentary games. I learned the basics of conditionals, loops, event-based programming, and effective user design.</p>
+            <p>It wasn't until many years later when I was preparing for college that I seriously began to consider the prospect of pursuing computer science as a career. The final day of freshman orientation, I was given the opportunity to change my major one more time before it would become a much more difficult process further into a degree track; I decided on (somewhat of) a whim that I'd do it -- I switched my major from linguistics to computer science right then and there. Three years down the line, and I don't regret my decision one bit.</p>
         </div>
         <div class="parallax-bg page-banner-container" id="pbg-bridge2">
             <div class="dark-text-container">
@@ -36,7 +36,7 @@
                 <hr/>
                 <h2>quiz application platform</h2>
                 <br>
-                <p><b>My role:</b> sole designer/developer</p>
+                <p><b>My role:</b> sole designer/developer/tester</p>
                 <p><b>Tools:</b> Python 3, PyQt 5</p>
                 <p><b>Code:</b> <a href="https://github.com/gerlacus/Quiz-Application-Platform">Github</a></p>
                 <p><b>Description:</b><br>
@@ -51,7 +51,7 @@
                 <hr/>
                 <h2>personal website</h2>
                 <br>
-                <p><b>My role:</b> sole designer/developer</p>
+                <p><b>My role:</b> sole designer/developer/tester</p>
                 <p><b>Tools:</b> HTML, CSS, Javascript, jQuery</p>
                 <p><b>Code:</b> <a href="https://github.com/gerlacus/gerlacus.github.io">Github</a></p>
                 <p><b>Description:</b><br/>
@@ -61,10 +61,11 @@
                 <hr>
                 <h2>peg solitaire</h2>
                 <br>
-                <p><b>My role:</b> sole contributor -- art, music, programming</p>
+                <p><b>My role:</b> sole contributor -- art, music, programming, QA</p>
                 <p><b>Tools:</b> GameMaker (GML)</p>
                 <p><b>Code:</b> <a href="https://github.com/gerlacus/CrackerBarrel_PegGame_Scripts">Github</a></p>
-                <p><b>Description:</b><br/>
+                <p><b>Description:</b>
+                <br>
                 <p>This is the bulk of the code I wrote for a coding/game development summer internship. The task I was given was to create a game from scratch in 3 days that simulated the 15-peg game featured on the tables of Cracker Barrel Restaurants (more info <a href="http://shop.crackerbarrel.com/toys-games/games/travel-games/peg-game/606154">here</a>).<p>
                 <p>Official rules printed on Cracker Barrel game boards:</p>
                 <p class="mus-quote">"Jump each tee and remove it - Leave only one? You're genius - Leave two and you're purty smart - Leave three and you're just plain dumb - Leave four or more, you're just plain eg-no-ra-moose."</p>
@@ -88,11 +89,45 @@
                         <li class="inner-bullet">Reset gameboard</li>
                         <li class="inner-bullet">Exit game</li>
                 </ul>
-                    <p>Because I was limited to 3 days (more like 2, when you count the schoolwork I had to finish and the lectures I had to attend!), I was unable to do a lot of the things I would have liked. One thing I'd have liked to implement was various game board shapes and/or sizes. This would be extremely difficult if I were to use the current implementation, due to the fact that I essentially had to hardcode the two arrays. If I were to somehow be able to let the arrays dynamically create themselves by scanning their neighbors and putting them into the two arrays, that would be ideal. Oh well.</p>
-                    <hr>
-                    <h2>more projects coming soon</h2>
-                    <br>
-                    <p>In the meantime, check out my <a href="https://github.com/gerlacus">Github</a>.</p>
+                <p>Because I was limited to 3 days (more like 2, when you count the schoolwork I had to finish and the lectures I had to attend!), I was unable to do a lot of the things I would have liked. One thing I'd have liked to implement was various game board shapes and/or sizes. This would be extremely difficult if I were to use the current implementation, due to the fact that I essentially had to hardcode the two arrays. If I were to somehow be able to let the arrays dynamically create themselves by scanning their neighbors and putting them into the two arrays, that would be ideal. Oh well.</p>
+                <hr>
+                <h2>perl practice projects</h2>
+                <br>
+                <p><b>My role:</b> sole designer/developer/tester</p>
+                <p><b>Tools:</b>Perl</p>
+                <p><b>Code:</b> <a href="https://github.com/gerlacus/PerlProjects">Github</a></p>
+                <p><b>Description:</b>
+                <br>
+                <p>My current internship as a software engineer is with CU-Boulder's Laboratory for Atmospheric and Space Physics; they've partnered with Lockheed Martin to train interns in graphical user interface testing procedures to ensure the integrity of the software that runs their IR missile detection satellite systems (SBIRS program). Apart from creating and executing GUI testing suites, part of our training is to learn Perl, in case the need to develop any code of our own should arise at Lockheed. Thus, I began to write various little projects to familiarize myself with the language and its nuances, listed below:</p>
+                <h4><b>Triangle Generator</b></h4>
+                <p>Extremely rudimentary program that takes input size / string from user and creates a pyramid of said string as tall as the size specified. Whipped up in a few minutes, this was more or less just a way to familiarize myself with the basic conventions of Perl (e.g. $calars and foreach loop syntax).</p>
+                <h4><b>Happy Number Finder</b></h4>
+                <p>Takes input of a positive integer and checks whether or not that integer is 'happy' -- that is, the sum of each of its digits squared and then repeated with this new sum over and over will eventually equal 1. For example, 19 is a happy number:</p>
+                <ol>
+                    <li>19 -> 1^2 + 9^2 = 1 + 81 = 82</li>
+                    <li>82 -> 8^2 + 2^2 = 64 + 4 = 68</li> 
+                    <li>68 -> 6^2 + 8^2 = 36 + 64 = 100</li> 
+                    <li>100 -> 1^2 + 0^2 + 0^2 = 1</li>
+                </ol>
+                <br>
+                <p>Because the end result is 1, the number 19 is happy.</p>
+                <p>If a number is not happy, it will fall into the following cycle: <i>4 -> 16 -> 37 -> 58 -> 89 -> 145 -> 42 -> 20 -> 4 -> ...</i> and will never reach 1. This script will run through iterations of an input until it either reaches 1 (in which case the number is happy) or it falls into the cycle described above (in which case the number is not happy, or 'sad').</p>
+                <p>Some other neat properties of happy numbers include: </p>
+                <ul>
+                    <li>Large integers are very quickly reduced to smaller ones. For example:
+                        <li class="inner-bullet">123456789 -> 1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2 + 7^2 + 8^2 + 9^2 = 285</li>
+                        <li class="inner-bullet">285 -> 2^2 + 8^2 + 5^2 = 93, etc...</li>
+                    </li>
+                    <li>A number's happiness is unchanged by adding zeros between any of the integers. For example, 19 is a happy number, but so is 190, 109, or 100,090.</li>
+                    <li>A number's happiness also remains unchanged by rearranging the digits in the number. For example, 176 is a happy number, and thus so are 167, 716, 761, 671, and 617.</li>
+                </ul>
+                <br>
+                <p>More information on happy numbers can be found <a href="https://en.wikipedia.org/wiki/Happy_number">here</a>.</p>
+                </ul>
+                <hr>
+                <h2>more projects coming soon</h2>
+                <br>
+                <p>In the meantime, check out my <a href="https://github.com/gerlacus">Github</a>.</p>
 
 
             </div>

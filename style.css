@@ -50,8 +50,9 @@ p, .dark-text-container li {
 }
 
 .dark-text-container li {
-    text-align: left;
+    text-align: justify;
     margin-left: 10%;
+    margin-right: 10%;
     padding: 0.2rem 1rem;
     line-height: 1.5rem;
 }
@@ -139,14 +140,14 @@ ul {
 .embed-vid-1 {
     width: 50%;
     height: 1rem;
-    margin: 1rem 4rem 1rem 0;
+    margin: 1rem 4rem 0rem 0;
     border: 3px solid rgba(0, 0, 0, 0.7);
     max-height: 25rem;
 }
 
 .embed-vid-2 {
     width: 50%;
-    margin: 1rem 0 1rem 4rem;
+    margin: 1rem 0 0 4rem;
     border: 3px solid rgba(0, 0, 0, 0.7);
     min-height: 15rem;
 }
@@ -166,6 +167,7 @@ ul {
     margin-top: 1rem;
     padding: 1rem;
     text-align: center;
+    padding-bottom: 0;
 }
 
 .h-layout-inner-2a p {
@@ -680,6 +682,7 @@ hr {
     border: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     margin: 1rem 10%;
+    margin-top: 2rem;
     padding: 0;
 }
 
@@ -741,6 +744,12 @@ hr {
 
     html {
         font-size: 24px;
+    }
+
+    /* PORTRAIT */
+    /* Horizontal line separator + "stretcher" */
+    hr {
+        margin-top: 1rem;
     }
 
     /* PORTRAIT */
@@ -888,6 +897,7 @@ hr {
     .h-layout-inner {
         width: 95%;
         padding: 1rem;
+        padding-bottom: 0rem;
     }
 
     /* PORTRAIT */
@@ -1078,6 +1088,7 @@ hr {
     only screen and (min-width: 737px) and (max-width: 1000px) and (max-resolution: 1dppx),
     only screen and (min-device-width: 737px) and (max-width: 1024px) and (orientation: portrait) and (min-resolution: 2dppx),
     only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape),
+    only screen and (min-device-width: 320px) and (max-device-width: 855px) and (orientation: landscape),
     only screen and (min-device-width: 499px) and (max-device-width: 736px) and (orientation: landscape) and (min-resolution: 2dppx) {
     * {
         /*background-color: #00f;*/
@@ -1090,6 +1101,12 @@ hr {
     /* LANDSCAPE */
     body {
         min-width: 720px;
+    }
+
+    /* LANDSCAPE */
+    /* Horizontal line separator + "stretcher" */
+    hr {
+        margin-top: 1rem;
     }
 
     /* LANDSCAPE */
