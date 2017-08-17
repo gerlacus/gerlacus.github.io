@@ -1084,7 +1084,7 @@ hr {
 
 /* LANDSCAPE MODE */
 @media
-    only screen and (min-width: 737px) and (max-width: 1000px) and (max-resolution: 1dppx),
+    only screen and (min-width: 737px) and (max-width: 1000px) and (min-resolution: 1dppx),
     only screen and (min-device-width: 737px) and (max-width: 1024px) and (orientation: portrait) and (min-resolution: 2dppx),
     only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape),
     only screen and (min-device-width: 320px) and (max-device-width: 855px) and (orientation: landscape),
