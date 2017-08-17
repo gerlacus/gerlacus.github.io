@@ -42,8 +42,6 @@ h4 {
     text-transform: uppercase;
 }
 
-
-
 p, .dark-text-container li {
     font-family: 'Bitter', sans-serif;
     font-size: 1rem;
@@ -351,7 +349,7 @@ ul {
     margin-bottom: 1rem;
 }
 
-.text-section a:visited, a:link {
+.text-section .text-a:visited, .text-a:link {
     color: #604f4f;
 }
 
@@ -569,6 +567,7 @@ ul {
 .day-button:hover {
     background-color: #604f4f;
     color: #e0d2d2;
+
 }
 
 .night-button, .night-button:link, .night-button:visited {
