@@ -782,7 +782,7 @@ hr {
         top: -0.9rem;
         left: 2rem;
         line-height: 1rem;
-        min-width: 15rem;
+        min-width: 25rem;
     }
 
     /* PORTRAIT */
@@ -962,13 +962,14 @@ hr {
         min-height: 6rem;
         width: 100%;
         text-align: center;
-        margin: 2rem auto 0 auto;
+        margin: 3rem auto 0rem auto;
     }
 
     /* PORTRAIT */
     .button {
         border-radius: 1rem;
         min-height: 6rem;
+        margin-bottom: 1rem;
     }
 
     /* PORTRAIT */
