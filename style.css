@@ -761,9 +761,12 @@ hr {
 
 /* SMARTPHONE DISPLAYS */
 
+
+    /*only screen and (max-device-width: 736px),*/
+
 /* PORTRAIT MODE */
 @media 
-    only screen and (max-width: 736px),
+    only screen and (max-device-width: 320px),
     only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait),
     only screen and (max-device-width: 736px) and (min-resolution: 2dppx) and (orientation: portrait) {
 
@@ -1130,17 +1133,15 @@ hr {
         margin-top: 0.5rem;
         padding: 0;
     }
-
-
 }
 
 /* LANDSCAPE MODE */
 @media
-    only screen and (min-width: 737px) and (max-width: 1000px),
-    only screen and (min-device-width: 837px) and (max-width: 1024px) and (orientation: portrait) and (min-resolution: 3dppx),
+    only screen and (min-device-width: 737px) and (max-device-width: 1000px),
+    only screen and (min-device-width: 837px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 2dppx),
     only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape),
     only screen and (min-device-width: 320px) and (max-device-width: 855px) and (orientation: landscape),
-    only screen and (min-device-width: 499px) and (max-device-width: 736px) and (orientation: landscape) and (min-resolution: 3dppx) {
+    only screen and (min-device-width: 499px) and (max-device-width: 736px) and (orientation: landscape) and (min-resolution: 2dppx) {
     * {
         /*background-color: #00f;*/
     }
