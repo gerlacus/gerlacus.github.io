@@ -10,6 +10,10 @@
     transition: width 200ms, height 200ms, size 200ms;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     color: #0D0;
     background-color: #e8c6ab;
@@ -70,7 +74,7 @@ p, .dark-text-container li {
 }
 
 .list-des {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 1rem;
 }
@@ -772,7 +776,7 @@ hr {
     only screen and (max-device-width: 736px) and (min-resolution: 2dppx) and (orientation: portrait) {
 
     html {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     /* PORTRAIT */
@@ -1152,7 +1156,7 @@ hr {
     }
 
     html {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     /* LANDSCAPE */
