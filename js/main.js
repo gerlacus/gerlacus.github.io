@@ -105,9 +105,9 @@ function handleOscilloscopeStart()
       }
     }
 
-    let r_val = (alpha * 155) + 100;
-    let g_val = (alpha * 80) + 175;
-    let b_val = (alpha * 100) + 155;
+    let r_val = (alpha * 55) + 150;
+    let g_val = (alpha * 200) + 80;
+    let b_val = (alpha * 100) + 120;
 
     strokeStyle = 'rgba(' + r_val + ', ' + g_val + ', ' + b_val + ', ' + alpha + ')';
 
