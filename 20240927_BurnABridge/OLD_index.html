@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Home - Max M.B.</title>
+        <link href="https://fonts.googleapis.com/css?family=Cormorant:400,400i,500,500i,600,600i,700,700i|Open+Sans:300,400,400i,600,700" rel="stylesheet"> 
+
+        <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Bitter:400,4001,700" rel="stylesheet"> 
+
+        <link href="style.css" type="text/css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="navbar"></div>
+        <div class="page-banner-container parallax-bg" id="main-page-banner">
+            <div class="page-banner">
+                <h1>Call me 'Max.'</h1>
+                <hr/>
+                <h2>Gerlacus Marinus Max Messenger Bouricius</h2>
+                <h2>Musician / Programmer</h2>
+            </div>
+        </div>
+        <!-- WHO I AM -->
+        <div class="me-portrait-container">
+            <img src="img/authorPhoto2.jpg" class="me-portrait">
+        </div>
+
+        <div class="text-section">
+            <h1 class="text-below-portrait">Who I Am</h1>
+            <p>Born and raised in Boulder, Colorado, I'm an undergraduate student at CU-Boulder studying computer science and Chinese.
+                When I'm not drowning in schoolwork, you can find me composing/arranging music, minimizing my carbon footprint, or mixing a killer gin and tonic.</p>
+            <a href="about.html" class="button day-button">
+                <h4>more about me</h4>
+            </a>
+        </div>
+
+        <div class="parallax-bg page-banner-container dark-bg-box" id="pbg-seasons">
+            <h1>What I Do</h1>
+            <div class="h-layout-outer">
+                <div class="h-layout-inner h-layout-music">
+                    <div class="slideshow1">
+                        <img src="img/music1.jpg" class="music-ss-img"/>
+                        <img src="img/music4.jpg" class="music-ss-img"/>
+                        <img src="img/music2.jpg" class="music-ss-img"/>
+                        <img src="img/music5.jpg" class="music-ss-img"/>
+                        <img src="img/music6.jpg" class="music-ss-img"/>
+                        <img src="img/music7.jpg" class="music-ss-img"/>
+                    </div>
+                    <h2>Music</h2>
+                    <p>A cappella arrangements and music composition for video games.</p>
+                    <ul>
+                        <li>Serenity Forge
+                            <p class="list-des">Video game developer/producer</p>
+                        </li>
+                        <li>America's Got Talent
+                            <p class="list-des">National television show</p>
+                        </li>
+                        <li>Mystic Melee
+                            <p class="list-des">PC game (August 2017)</p>
+                        </li>
+                        <li>The King's Bird
+                            <p class="list-des">PC/console game (Summer 2018)</p>
+                        </li>
+                        <li>ICCAs
+                            <p class="list-des">Collegiate a cappella competition
+                        </li>
+                    </ul>
+                    <div class="stretcher"></div>
+                    <div class="button-container">
+                        <a href="music.html" class="button night-button button-contained-left">
+                            <h4>more info/listen</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="h-layout-inner h-layout-code">
+                    <h2>Code</h2>
+                    <p>Personal projects, schoolwork, and internship work.</p>
+                    <ul>
+                        <li>Python/C/C++
+                            <p class="list-des">Skill level: advanced</p>
+                        </li>
+                        <li>HTML/CSS/Javascript
+                            <p class="list-des">Skill level: intermediate</p>
+                        </li>
+                        <li>Unit testing/QA
+                            <p class="list-des">Kepler OASIS panel + graphical app regression testing</p>
+                        </li>
+                        <li>Tools/IDEs/frameworks
+                            <p class="list-des">React, PyQt, EggPlant, Vim, Github, etc.</p>
+                        </li>
+                        <li>Other
+                            <p class="list-des">MySQL, Perl, ML, AI, gamedev, etc.</p>
+                        </li>
+                    </ul>
+                    <div class="stretcher"></div>
+                    <div class="button-container">
+                        <a href="code.html" class="button night-button button-contained-right">
+                            <h4>projects/resume</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="slideshow2">
+                <img src="img/code1.jpg" class="code-ss-img"/>
+                <img src="img/code3.jpg" class="code-ss-img"/>
+                <img src="img/code2.jpg" class="code-ss-img"/>
+            </div>
+        </div>
+
+        <footer></footer>
+
+        <!-- <p>Check out my music!</p>
+        <div class="mus-container-full">
+            <div class="mus-track-container">
+                <audio src="/mus/mm_promo.mp3" controls="controls">Your browser does not support the audio element.</audio>
+                <h4>Mystic Melee Promo Reel</h4>
+            </div>
+        </div>
+        -->
+        <!--<div class="parallax-bg" id="pbg-winter"></div> -->
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"> </script>
+    <script src="js/main.js"></script>
+    <script>
+        $(function() {
+            $('.navbar').load('navbar.html');
+            $('footer').load('footer.html');
+        });
+    </script>
+    </body>
+</html>
+
