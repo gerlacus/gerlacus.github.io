@@ -81,7 +81,7 @@ function drawOscilloscope() {
 
   canvasContext.clearRect(0, 0, oscCanvas.width, oscCanvas.height);
   canvasContext.beginPath();
-  canvasContext.strokeStyle = "#f0efebff";
+  canvasContext.strokeStyle = "#f6dfdbaa"; /*"#f0efebff";*/
 //   canvasContext.lineWidth = oscCanvas.height / 5;
   
 
@@ -91,7 +91,7 @@ function drawOscilloscope() {
     if (i === 0) {
       canvasContext.moveTo(x, y);
     } else {
-       canvasContext.lineWidth = (Math.abs((y / 2) - y)) - 80;
+       canvasContext.lineWidth = (Math.abs((y / 2) - y) - 60);
       
       canvasContext.lineTo(x, y);
     }

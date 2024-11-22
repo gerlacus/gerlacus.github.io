@@ -146,6 +146,7 @@ html, body {
     -webkit-text-stroke: 1px var(--col_primary_bright);
     border-radius: var(--border-radius);
     box-shadow: inset 0px 0px var(--shadow_inner_blur) var(--col_accent), 0px 4px var(--shadow_outer_blur) var(--col_shadow_outer);
+    border: 2px solid var(--col_primary)
 }
 
 /* Music player */
@@ -156,12 +157,9 @@ audio {
 }
 
 #oscilloscope {
-width: 100%;
-margin: 16px auto 16px auto;
-clip: inherit;
+width: 90%;
+margin: 0% 5% 0% 5%;
 }
-
-
 
 /* Mobile */
 [class*="col-"] {
