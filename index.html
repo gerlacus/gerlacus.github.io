@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/main.js" defer></script>
     </head>
     <link href="style.css" type="text/css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,17 +39,15 @@
             <div class="row">
                 <div class="col-12 s-col-12">
                     <h3 style="margin: 19vw 0 1em 0; font-weight: 700;">Here's some of that air.</h3>
-                    <div id="div-listen" style="margin-bottom: 9%;">
-                        <canvas id="oscilloscope"></canvas>
+                    <div>
+                        <div id="div-listen" style="margin-bottom: 9%;">
+                            <canvas id="oscilloscope"></canvas>
+                        </div>
                     </div>
                     <div class="row row-audio">
-                        <audio class="audio" crossorigin="anonymous" controls>
-                            <source src="mus/20241022_Reel1.mp3">
+                            <audio class="audio" id="audio" src="mus/20241022_Reel1.mp3" crossorigin="anonymous" onplay="handleOscilloscopeStart()" controls="controls">Your browser does not support these audio elements.</audio>
                         </audio>
                     </div>
-                    <!-- <div class="row row-audio">
-                        <audio class="audio" src="mus/2_fujifilm.mp3" crossorigin="anonymous" controls></audio>
-                    </div> -->
                 </div>
             </div>
             <div class="row">
@@ -98,8 +97,5 @@
             </div>
         </div>
     </div>
-
-    <script src="js/main.js"></script>
-
     </body>
 </html>

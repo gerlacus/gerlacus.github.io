@@ -13,93 +13,136 @@ function scrollBg() {
 document.getElementById("body").onscroll = scrollBg;
 document.getElementById("body").onload = scrollBg;
 
-
 // AUDIO
 
-//TODO: fix this at some point plz
-const audioElements = document.getElementsByClassName("audio");
-var indexPlaying = 0;
+var audioElement = document.getElementById("audio");
+var track;
+var masterGain;
+var analyser;
+var audioContext; // = new AudioContext();
 
-for (var i = 0; i < audioElements.length; i++) {
-        console.log("i = " + i);
-        if (!audioElements[i].paused) {
-            console.log("playing!");
-            indexPlaying = audioElements[i];
-        }
-    }
+function handleOscilloscopeStart()
+{
 
-
-const audioElement = audioElements[indexPlaying];
-const audioContext = new AudioContext();
-const track = audioContext.createMediaElementSource(audioElement);
-const masterGain = audioContext.createGain();
-const analyser = audioContext.createAnalyser();
-
-// Build Audio Chain
-
-track
-  .connect(masterGain)
-  .connect(analyser)
-  .connect(audioContext.destination);
-
-
-/*
-   * The Web Audio API provides the AnalyserNode for this purpose.
-   * In addition to providing the raw waveform (aka time domain) data,
-   * it provides methods for accessing the audio spectrum (aka frequency domain) data.
-   *
-   * At this point, the waveform array will contain values from -1 to 1 corresponding to the audio waveform playing
-   * through the masterGain node. This is just a snapshot of whatever’s currently playing.
-   * */
-const waveform = new Float32Array(analyser.frequencyBinCount);
-analyser.getFloatTimeDomainData(waveform);
-
-function updateWaveform() {
-  requestAnimationFrame(updateWaveform);
-  analyser.getFloatTimeDomainData(waveform);
-}
-
-updateWaveform();
-
-// Setup canvas
-var style = getComputedStyle(document.body);
-
-var btn = document.getElementById("div-listen");
-var btnPosition = btn.getBoundingClientRect();
-
-var width = btnPosition.width;
-var height = btnPosition.height;
-
-const oscCanvas = document.getElementById("oscilloscope");
-oscCanvas.width = width;
-oscCanvas.height = height;
-const canvasContext = oscCanvas.getContext("2d");
-
-function drawOscilloscope() {
-
-  requestAnimationFrame(drawOscilloscope);
-
-  canvasContext.clearRect(0, 0, oscCanvas.width, oscCanvas.height);
-  canvasContext.beginPath();
-  canvasContext.strokeStyle = "#f6dfdbaa"; /*"#f0efebff";*/
-//   canvasContext.lineWidth = oscCanvas.height / 5;
   
 
-  for (let i = 0; i < waveform.length; i++) {
-    const x = i;
-    const y = ((1.5 + ((waveform[i])/ 2)) * (oscCanvas.height * 0.33));
-    if (i === 0) {
-      canvasContext.moveTo(x, y);
-    } else {
-       canvasContext.lineWidth = (Math.abs((y / 2) - y) - 60);
-      
-      canvasContext.lineTo(x, y);
-    }
+  if (audioContext)
+  {
+    audioContext.resume();
   }
-  canvasContext.stroke();
-}
+  else
+  {
+    audioContext = new AudioContext();
+    track = audioContext.createMediaElementSource(audioElement);
 
-drawOscilloscope();
+    masterGain = audioContext.createGain();
+    analyser = audioContext.createAnalyser();
+    
+    track
+    .connect(masterGain)
+    .connect(analyser)
+    .connect(audioContext.destination);
+  }
+
+
+  
+
+  // Build Audio Chain
+
+  
+
+
+  /*
+    * The Web Audio API provides the AnalyserNode for this purpose.
+    * In addition to providing the raw waveform (aka time domain) data,
+    * it provides methods for accessing the audio spectrum (aka frequency domain) data.
+    *
+    * At this point, the waveform array will contain values from -1 to 1 corresponding to the audio waveform playing
+    * through the masterGain node. This is just a snapshot of whatever’s currently playing.
+    * */
+  const waveform = new Float32Array(analyser.frequencyBinCount);
+  analyser.getFloatTimeDomainData(waveform);
+
+  function updateWaveform() {
+    requestAnimationFrame(updateWaveform);
+    analyser.getFloatTimeDomainData(waveform);
+  }
+
+  updateWaveform();
+
+  // Setup canvas
+  var btn = document.getElementById("div-listen");
+  var btnPosition = btn.getBoundingClientRect();
+
+  const oscCanvas = document.getElementById("oscilloscope");
+  oscCanvas.width = Math.min(oscCanvas.width, btnPosition.width);
+  oscCanvas.height = Math.min(oscCanvas.height, btnPosition.height);
+
+  const canvasContext = oscCanvas.getContext("2d");
+
+  function drawOscilloscope()
+  {
+    requestAnimationFrame(drawOscilloscope);
+    canvasContext.clearRect(0, 0, oscCanvas.width, oscCanvas.height);
+    canvasContext.beginPath();
+
+    var strokeStyle;
+    var alpha = 0.0;
+
+    for (let i = 0; i < waveform.length; i++) {
+      var x = i;
+      var y = ((1.0 + ((waveform[i]))) * (oscCanvas.height * 0.5));
+
+      if (i === 0) {
+        canvasContext.moveTo(x, y);
+      } else {
+        var lineWidth = Math.cos(x*6.28/waveform.length) + (Math.abs(y) * 0.05);
+        alpha = (Math.abs(waveform[i]) * 5) + 0.1;
+
+        canvasContext.lineWidth = lineWidth;
+      
+        canvasContext.lineTo(x, y);
+      }
+    }
+
+    let r_val = (alpha * 155) + 100;
+    let g_val = (alpha * 80) + 175;
+    let b_val = (alpha * 100) + 155;
+
+    strokeStyle = 'rgba(' + r_val + ', ' + g_val + ', ' + b_val + ', ' + alpha + ')';
+
+    canvasContext.strokeStyle = strokeStyle;
+    canvasContext.stroke();
+  }
+
+  drawOscilloscope();
+
+
+}
+//handleOscilliscope();
+
+// document.getElementById("audio").onclick = handleOscilliscope;
+
+//handleOscilliscopeStart();
+
+function handleOscilliscopeEnd()
+{
+  // console.log("stopping! track = " + track);
+  // if (track !== null)
+  // {
+  //   track.disconnect();
+  //   track = null;
+  //   console.log("track disconnected. track now = " + track);
+  // }
+
+  // if (audioContext !== null)
+  // {
+  //   console.log("audio Context not null");
+  //   audioContext.close().then(function() {
+  //     audioContext = null;
+  //   });
+  // }
+}
 
 // track.disconnect(audioContext.destination)
 // .disconnect(analyser)
@@ -110,7 +153,7 @@ drawOscilloscope();
     * In this case we’ll request the data as a Uint8Array because values in the range 0-255
     * are exactly what we need when performing Canvas pixel manipulation.
     * */
-const spectrum = new Uint8Array(analyser.frequencyBinCount);
+// const spectrum = new Uint8Array(analyser.frequencyBinCount);
 
 // function updateSpectrum() {
 //   requestAnimationFrame(updateSpectrum);

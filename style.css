@@ -66,13 +66,15 @@
     --col_hypertext: #d8d8d8;
     --col_background: #181d16;
     --col_primary: #c99d5e;
+    --col_primary_transparent: #ffbf6344;
     --col_secondary: #6ca2a3;
+    --col_secondary_transparent: #a4fdff44;
     --col_accent: #73a07f;
     --col_primary_bright: #ffbf63;
     --col_secondary_bright: #a4fdff;
     --col_accent_bright: #a8ffbf;
     --col_accent_bright_transparent: #a8ffbf66;
-    --col_shadow_outer: rgba(0, 0, 0, 0.25);
+    --col_shadow_outer: rgba(62, 11, 11, 0.25);
     --col_shadow_inner: #c99d5e88;
     --col_shadow_glass_outer: rgba(0, 0, 0, 0.25);
     --col_shadow_glass_inner: rgba(255, 255, 255, 0.25);
@@ -87,6 +89,10 @@
 
 body {
     margin: 0;
+}
+
+img {
+    image-rendering:optimizeSpeed;
 }
 
 html, body {
@@ -140,12 +146,12 @@ html, body {
 
 #div-listen {
     width: 100%;
+    /*height: 16em;*/
     height: 100%;
-    margin: 0;
-    background-image: linear-gradient(20deg, var(--col_primary), var(--col_secondary_bright));
+    background-image: linear-gradient(20deg, var(--col_primary_transparent), var(--col_secondary_transparent));
     -webkit-text-stroke: 1px var(--col_primary_bright);
     border-radius: var(--border-radius);
-    box-shadow: inset 0px 0px var(--shadow_inner_blur) var(--col_accent), 0px 4px var(--shadow_outer_blur) var(--col_shadow_outer);
+    box-shadow: inset 0px 0px var(--shadow_inner_blur) var(--col_accent_bright_transparent), 0px 4px var(--shadow_outer_blur) var(--col_shadow_outer);
     border: 2px solid var(--col_primary)
 }
 
@@ -158,7 +164,10 @@ audio {
 
 #oscilloscope {
 width: 90%;
-margin: 0% 5% 0% 5%;
+height: 90%;
+margin: 5%;
+box-shadow: inset 40px 0px 80px var(--col_text_transparent), inset -40px 0px 80px var(--col_text_transparent), inset 8px 0px 8px white, inset -8px 0px 8px white;
+border-radius: var(--border-radius);
 }
 
 /* Mobile */
@@ -285,12 +294,7 @@ p {
     padding: 0;
     height: 100%;
     background-image: url('img/bg1.jpg');
-    position: relative;
     box-shadow: inset var(--bg_fade_s) var(--bg_fade_s) var(--bg_fade_s) var(--col_bg_fade_xl), inset calc(0px - var(--bg_fade_s)) calc(0px - var(--bg_fade_s)) var(--bg_fade_s) var(--col_bg_fade_xl);
-}
-
-#placeholdersoyoucanscroll{
-    height:100vh;
 }
 
 hr {
@@ -320,7 +324,6 @@ hr {
     .portrait { aspect-ratio: 1.0; height: var(--headline_height_m); background-position: 60% 20%;}
     .glass {margin: 3% 8% 3% 8%;}
     .headline-text { font-size: var(--headline_text_m);}
-    #btn-listen { width: 80%; height: 5vw;}
     #bg {box-shadow: inset var(--bg_fade_m) 0px var(--bg_fade_m) var(--col_bg_fade_xl), inset calc(0px - var(--bg_fade_m)) 0px var(--bg_fade_m) var(--col_bg_fade_xl);}
 }
 
@@ -347,6 +350,7 @@ p {font-size: var(--p_l);}
 .glass {margin: 32px 10%; max-width: var(--max_width_glass);}
 .headline-text { font-size: var(--headline_text_l);}
 #bg {box-shadow: inset var(--bg_fade_l) 0px var(--bg_fade_l) var(--col_bg_fade_xl), inset calc(0px - var(--bg_fade_l)) 0px var(--bg_fade_l) var(--col_bg_fade_xl);}
+#div-listen { max-width: 50em; margin: auto; }
 }
 
 /* Beyond */
@@ -359,4 +363,9 @@ p {font-size: var(--p_l);}
     h4 {font-size: var(--h4_xl);}
     p {font-size: var(--p_xl);}
     .headline-text {font-size: var(--headline_text_xl);}
+    #div-listen {
+        max-width: 50em;
+        margin: auto;
+    }
+    
 }
