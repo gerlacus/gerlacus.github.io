@@ -48,10 +48,6 @@ function handleOscilloscopeStart()
   
 
   // Build Audio Chain
-
-  
-
-
   /*
     * The Web Audio API provides the AnalyserNode for this purpose.
     * In addition to providing the raw waveform (aka time domain) data,
@@ -89,21 +85,29 @@ function handleOscilloscopeStart()
     var strokeStyle;
     var alpha = 0.0;
 
+    var totalWaveform = 0;
+
     for (let i = 0; i < waveform.length; i++) {
       var x = i;
       var y = ((1.0 + ((waveform[i]))) * (oscCanvas.height * 0.5));
+
+      totalWaveform += waveform[i];
 
       if (i === 0) {
         canvasContext.moveTo(x, y);
       } else {
         var lineWidth = Math.cos(x*6.28/waveform.length) + (Math.abs(y) * 0.05);
-        alpha = (Math.abs(waveform[i]) * 5) + 0.1;
+        alpha = Math.pow(Math.abs(waveform[i]), 0.2) + 0.1;
 
         canvasContext.lineWidth = lineWidth;
       
+        
+
         canvasContext.lineTo(x, y);
       }
     }
+
+    var averageWaveform = totalWaveform / waveform.length;
 
     let r_val = (alpha * 55) + 150;
     let g_val = (alpha * 200) + 80;
@@ -111,84 +115,25 @@ function handleOscilloscopeStart()
 
     strokeStyle = 'rgba(' + r_val + ', ' + g_val + ', ' + b_val + ', ' + alpha + ')';
 
+    updateDivListenGlow(255, 191, 99, alpha * 0.5);
+
     canvasContext.strokeStyle = strokeStyle;
     canvasContext.stroke();
   }
 
   drawOscilloscope();
 
+  function updateDivListenGlow(r, g, b, a)
+  {
+    // const divListenGlow = document.getElementById('div-listen-glow');
+    const divListenGlow = document.getElementById('div-listen');
+    const boxShadowValue = "inset 0px 0px " + (3 * a) + "rem rgba(" + r + ", " + g + ", " + b + ", " + a + ")";
+
+    const boxShadowValue1 = "inset 0px 0px 3vw rgba(" + r + ", " + g + ", " + b + ", " + a + ")";
+    const boxShadowValue2 = "inset 0px var(--col_bg_fade_s)"
+    const boxShadowValue3 = "inset calc(0px - var(--bg_fade_s)) calc(0px - var(--bg_fade_s)) var(--bg_fade_s) var(--col_bg_fade_s)"
+    
+    divListenGlow.style.boxShadow = boxShadowValue;
+  }
 
 }
-//handleOscilliscope();
-
-// document.getElementById("audio").onclick = handleOscilliscope;
-
-//handleOscilliscopeStart();
-
-function handleOscilliscopeEnd()
-{
-  // console.log("stopping! track = " + track);
-  // if (track !== null)
-  // {
-  //   track.disconnect();
-  //   track = null;
-  //   console.log("track disconnected. track now = " + track);
-  // }
-
-  // if (audioContext !== null)
-  // {
-  //   console.log("audio Context not null");
-  //   audioContext.close().then(function() {
-  //     audioContext = null;
-  //   });
-  // }
-}
-
-// track.disconnect(audioContext.destination)
-// .disconnect(analyser)
-// .disconnect(masterGain);
-
-// Spectrogram
-/*
-    * In this case we’ll request the data as a Uint8Array because values in the range 0-255
-    * are exactly what we need when performing Canvas pixel manipulation.
-    * */
-// const spectrum = new Uint8Array(analyser.frequencyBinCount);
-
-// function updateSpectrum() {
-//   requestAnimationFrame(updateSpectrum);
-//   analyser.getByteFrequencyData(spectrum);
-// }
-
-// updateSpectrum();
-
-// // Setup Canvas
-// const spectroCanvas = document.getElementById("spectrogram");
-// spectroCanvas.width = spectrum.length;
-// spectroCanvas.height = 200;
-// const spectroContext = spectroCanvas.getContext("2d");
-// let spectroOffset = 0;
-
-// function drawSpectrogram() {
-//   requestAnimationFrame(drawSpectrogram);
-
-//   const slice = spectroContext.getImageData(
-//     0,
-//     spectroOffset,
-//     spectroCanvas.width,
-//     1
-//   );
-
-//   for (let i = 0; i < spectrum.length; i++) {
-//     slice.data[4 * i + 0] = spectrum[i]; // R
-//     slice.data[4 * i + 1] = spectrum[i]; // G
-//     slice.data[4 * i + 2] = spectrum[i]; // B
-//     slice.data[4 * i + 3] = 255; // A
-//   }
-
-//   spectroContext.putImageData(slice, 0, spectroOffset);
-//   spectroOffset += 1;
-//   spectroOffset %= spectroCanvas.height;
-// }
-
-// drawSpectrogram();

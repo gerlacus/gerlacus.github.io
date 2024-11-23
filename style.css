@@ -66,7 +66,7 @@
     --col_hypertext: #d8d8d8;
     --col_background: #181d16;
     --col_primary: #c99d5e;
-    --col_primary_transparent: #ffbf63bb;
+    --col_primary_transparent: rgba(255, 191, 99, 0.733);
     --col_secondary: #6ca2a3;
     --col_secondary_transparent: #a4fdffbb;
     --col_accent: #73a07f;
@@ -104,6 +104,10 @@ html, body {
     height: max-content;
     width: 100%;
     /* border: 1px dashed green; */
+}
+
+canvas {
+    height: 0;
 }
 
 .glass {
@@ -155,11 +159,22 @@ audio {
 #div-listen {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(20deg, var(--col_primary_transparent), var(--col_secondary_transparent));
+    /* background-image: linear-gradient(20deg, var(--col_primary_transparent), var(--col_secondary_transparent)); */
+    background-image: linear-gradient(20deg, var(--col_secondary_transparent), var(--col_accent_bright_transparent));
     -webkit-text-stroke: 1px var(--col_primary_bright);
     border-radius: var(--border-radius);
-    box-shadow: inset 0px 0px var(--shadow_inner_blur) var(--col_accent_bright_transparent), 0px 4px var(--shadow_outer_blur) var(--col_shadow_outer);
+    box-shadow: inset 0px 0px var(--shadow_inner_blur) var(--col_primary_transparent), 0px 4px var(--shadow_outer_blur) var(--col_shadow_outer);
     border: 2px solid var(--col_primary)
+}
+
+#div-listen-glow
+{
+    margin: auto;
+    max-width: 50em;
+    box-shadow: 0px 0px 30vw #a4fdff44,
+        0px -50vw 100vw #a4fdff11,
+        0px -25vw 50vw #a4fdff11;
+    border-radius: var(--border-radius);
 }
 
 #oscilloscope {
@@ -198,12 +213,13 @@ h1 {
   letter-spacing:0.00rem;
   margin: 12.0rem 0 12.0rem 0;
   color: transparent;
-  background-image: linear-gradient(20deg, var(--col_primary_bright), var(--col_secondary_bright));
+  background-image: linear-gradient(20deg, var(--col_secondary_transparent), var(--col_accent_bright_transparent));
   -webkit-text-stroke: 1px var(--col_primary_bright);
   background-clip: text;
   font-size: var(--h1_s);
   text-align: center;
-  text-shadow: 0px 0px 50px var(--col_primary);
+  text-shadow: 0px 0px 160px var(--col_primary_bright),
+  0px 0px 320px white;
 }
 
 h2 {
@@ -253,6 +269,11 @@ p {
     color: var(--col_text);
     text-shadow: 0px 0px 32px var(--col_text_shadow);
     text-align: center;
+}
+
+.subtitle {
+    color: #f0efeb44;
+    font-size: 4.0vw;
 }
 
 .pitch {
@@ -325,6 +346,7 @@ hr {
     h3 {font-size: var(--h3_m);}
     h4 {font-size: var(--h4_m);}
     p {font-size: var(--p_m);}
+    .subtitle { font-size: 2.0vw;}
     .portrait { aspect-ratio: 1.0; height: var(--headline_height_m); background-position: 60% 20%;}
     .glass {margin: 3% 8% 3% 8%;}
     .headline-text { font-size: var(--headline_text_m);}
@@ -356,6 +378,7 @@ p {font-size: var(--p_l);}
 .headline-text { font-size: var(--headline_text_l);}
 #bg {box-shadow: inset var(--bg_fade_l) 0px var(--bg_fade_l) var(--col_bg_fade_l), inset calc(0px - var(--bg_fade_l)) 0px var(--bg_fade_l) var(--col_bg_fade_l);}
 #div-listen { max-width: 50em; margin: auto; }
+.subtitle { font-size: 1.9vw;}
 }
 
 /* Beyond */
@@ -368,9 +391,8 @@ p {font-size: var(--p_l);}
     h4 {font-size: var(--h4_xl);}
     p {font-size: var(--p_xl);}
     .headline-text {font-size: var(--headline_text_xl);}
-    #div-listen {
-        max-width: 50em;
-        margin: auto;
-    }
+    #div-listen { max-width: 50em; margin: auto; }
+    .subtitle { font-size: 2rem;}
+
     
 }
