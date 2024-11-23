@@ -16,18 +16,18 @@
     --h2_l: 8.0vw;
     --h2_xl: 8.0rem;
 
-    --h3_s: 5.0vw;
+    --h3_s: 4.0vw;
     --h3_m: 2.5vw;
     --h3_l: 2.5vw;
     --h3_xl: 2.5rem;
 
     --h4_s: 5.0vw;
-    --h4_m: 2.5vw;
+    --h4_m: 4.0vw;
     --h4_l: 2.5vw;
     --h4_xl: 2.5rem;
 
     --p_s: 5.0vw;
-    --p_m: 4.0vw;
+    --p_m: 3.0vw;
     --p_l: 2.0vw;
     --p_xl: 2.0rem;
 
@@ -79,10 +79,11 @@
     --col_shadow_glass_outer: rgba(0, 0, 0, 0.25);
     --col_shadow_glass_inner: rgba(255, 255, 255, 0.25);
 
-    --col_bg_fade_s: #f6dfdbaa;
-    --col_bg_fade_m: #f6dfdbaa;
-    --col_bg_fade_l: #f6dfdbaa;
-    --col_bg_fade_xl: rgb(240, 234, 228);
+    --col_bg_fade_s: #f6dfdb66;
+    --col_bg_fade_m: #f6dfdb66;
+    --col_bg_fade_l: #f6dfdb99;
+    --col_bg_fade_xl: #f6dfdb;
+    /* --col_bg_fade_xl: rgb(240, 234, 228); */
     /* --col_bg_fade_xl: rgb(240, 0, 0); */
 }
 
@@ -297,7 +298,7 @@ p {
     padding: 0;
     height: 100%;
     background-image: url('img/bg1.jpg');
-    box-shadow: inset var(--bg_fade_s) var(--bg_fade_s) var(--bg_fade_s) var(--col_bg_fade_xl), inset calc(0px - var(--bg_fade_s)) calc(0px - var(--bg_fade_s)) var(--bg_fade_s) var(--col_bg_fade_xl);
+    box-shadow: inset var(--bg_fade_s) var(--bg_fade_s) var(--bg_fade_s) var(--col_bg_fade_s), inset calc(0px - var(--bg_fade_s)) calc(0px - var(--bg_fade_s)) var(--bg_fade_s) var(--col_bg_fade_s);
 }
 
 hr {
@@ -327,11 +328,12 @@ hr {
     .portrait { aspect-ratio: 1.0; height: var(--headline_height_m); background-position: 60% 20%;}
     .glass {margin: 3% 8% 3% 8%;}
     .headline-text { font-size: var(--headline_text_m);}
-    #bg {box-shadow: inset var(--bg_fade_m) 0px var(--bg_fade_m) var(--col_bg_fade_xl), inset calc(0px - var(--bg_fade_m)) 0px var(--bg_fade_m) var(--col_bg_fade_xl);}
+    #bg {box-shadow: inset var(--bg_fade_m) 0px var(--bg_fade_m) var(--col_bg_fade_m),
+        inset calc(0px - var(--bg_fade_m)) 0px var(--bg_fade_m) var(--col_bg_fade_m);}
 }
 
 /* Desktop */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1080px) {
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -352,7 +354,7 @@ p {font-size: var(--p_l);}
 .portrait { aspect-ratio: 1.0; height: var(--headline_height_l);}
 .glass {margin: 32px 10%; max-width: var(--max_width_glass);}
 .headline-text { font-size: var(--headline_text_l);}
-#bg {box-shadow: inset var(--bg_fade_l) 0px var(--bg_fade_l) var(--col_bg_fade_xl), inset calc(0px - var(--bg_fade_l)) 0px var(--bg_fade_l) var(--col_bg_fade_xl);}
+#bg {box-shadow: inset var(--bg_fade_l) 0px var(--bg_fade_l) var(--col_bg_fade_l), inset calc(0px - var(--bg_fade_l)) 0px var(--bg_fade_l) var(--col_bg_fade_l);}
 #div-listen { max-width: 50em; margin: auto; }
 }
 
