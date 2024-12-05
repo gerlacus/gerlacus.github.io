@@ -5,7 +5,7 @@ function scrollBg() {
     var target = document.getElementById("bg");
     var offset = -2000;
     var xvalue = "center";
-    var factor = 0.5;
+    var factor = -0.5;
     var yvalue = offset + (scrolltotop * factor);
     target.style.backgroundPosition = xvalue + " " + yvalue + "px";
   }

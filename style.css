@@ -79,9 +79,9 @@
     --col_shadow_glass_outer: rgba(0, 0, 0, 0.25);
     --col_shadow_glass_inner: rgba(255, 255, 255, 0.25);
 
-    --col_bg_fade_s: #f6dfdb66;
-    --col_bg_fade_m: #f6dfdb66;
-    --col_bg_fade_l: #f6dfdb99;
+    --col_bg_fade_s: #f6dfdb33;
+    --col_bg_fade_m: #f6dfdb44;
+    --col_bg_fade_l: #f6dfdb66;
     --col_bg_fade_xl: #f6dfdb;
     /* --col_bg_fade_xl: rgb(240, 234, 228); */
     /* --col_bg_fade_xl: rgb(240, 0, 0); */
@@ -100,7 +100,6 @@ html, body {
     background-color: var(--col_bg_fade_xl); /* Sets the background color for the entire viewport */
     margin: 0;
     padding: 0;
-    /* height: 100%; */
     height: max-content;
     width: 100%;
     /* border: 1px dashed green; */
@@ -191,6 +190,23 @@ mix-blend-mode: hard-light;
 
 /* Mobile */
 [class*="col-"] {
+    width: 100%;
+}
+
+
+.row-audio {
+    border-radius: min(3vw, 4px);    
+    padding: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+.audio {
+    padding: 0px;
+    border-radius: min(3vw, 4px);
+    margin-left: 0;
+    margin-right: 0;
     width: 100%;
 }
 
@@ -320,6 +336,7 @@ p {
     height: 100%;
     background-image: url('img/bg1.jpg');
     box-shadow: inset var(--bg_fade_s) var(--bg_fade_s) var(--bg_fade_s) var(--col_bg_fade_s), inset calc(0px - var(--bg_fade_s)) calc(0px - var(--bg_fade_s)) var(--bg_fade_s) var(--col_bg_fade_s);
+    background-attachment: fixed;
 }
 
 hr {
@@ -378,6 +395,7 @@ p {font-size: var(--p_l);}
 .headline-text { font-size: var(--headline_text_l);}
 #bg {box-shadow: inset var(--bg_fade_l) 0px var(--bg_fade_l) var(--col_bg_fade_l), inset calc(0px - var(--bg_fade_l)) 0px var(--bg_fade_l) var(--col_bg_fade_l);}
 #div-listen { max-width: 50em; margin: auto; }
+.row-audio { max-width: 50em; margin: auto;}
 .subtitle { font-size: 1.9vw;}
 }
 
