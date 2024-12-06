@@ -16,7 +16,7 @@
     --h2_l: 8.0vw;
     --h2_xl: 8.0rem;
 
-    --h3_s: 4.0vw;
+    --h3_s: 4.8vw;
     --h3_m: 2.5vw;
     --h3_l: 2.5vw;
     --h3_xl: 2.5rem;
@@ -38,6 +38,7 @@
 
 
     --border-radius: max(0.2vw, 24px);
+    --border-radius_s: 24px;
 
     --shadow_inner_blur: 64px;
     --shadow_outer_blur: 8px;
@@ -59,6 +60,7 @@
     --bg_fade_xl: 8.0vw;
     
     --row_column_padding: 16px;
+    --row_column_padding_s: 8px;
 
     --col_text: #f0eff0;
     --col_text_transparent: #f0efeb44;
@@ -112,7 +114,7 @@ canvas {
 .glass {
     background-color: rgba(0,0,0, 0.2);
     border: 1px solid #F0EFEB88;
-    margin: 2%;
+    margin: 1%;
     backdrop-filter: blur(var(--shadow_outer_blur));
     box-shadow: inset 0px 0px 50px var(--col_shadow_glass_inner), 0px 0px 50px var(--col_shadow_glass_outer);
     border-radius: var(--border-radius);
@@ -121,17 +123,19 @@ canvas {
 }
 
 .row {
-    margin: var(--border-radius);
-    padding: var(--row_column_padding);
+    /* margin: var(--border-radius); */
+    margin: var(--row_column_padding_s);
+    padding: var(--row_column_padding_s);
     max-width: var(--max_width);
     border: 1px solid var(--col_text_transparent);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius_s);
     box-shadow:  0px 4px var(--shadow_outer_blur) var(--col_shadow_outer);
 }
 
 [class*="col-"] {
     float:left;
-    padding: var(--row_column_padding); /*10px;*/
+    padding: var(--row_column_padding_s); /*10px;*/
+    padding: 8px;
     /* border: 1px dashed rgba(255, 0, 0, 0.5); */
 }
 
@@ -365,10 +369,12 @@ hr {
     p {font-size: var(--p_m);}
     .subtitle { font-size: 2.0vw;}
     .portrait { aspect-ratio: 1.0; height: var(--headline_height_m); background-position: 60% 20%;}
-    .glass {margin: 3% 8% 3% 8%;}
+    .glass {margin: 3% 8% 3% 8%; border-radius: var(--border-radius);}
     .headline-text { font-size: var(--headline_text_m);}
     #bg {box-shadow: inset var(--bg_fade_m) 0px var(--bg_fade_m) var(--col_bg_fade_m),
         inset calc(0px - var(--bg_fade_m)) 0px var(--bg_fade_m) var(--col_bg_fade_m);}
+    .row { border-radius: var(--border-radius); margin: var(--row_column_padding); padding: var(--row_column_padding);
+    }
 }
 
 /* Desktop */
