@@ -6,10 +6,10 @@
 
 :root {
     
-    --h1_s: 13.0vw;
-    --h1_m: 11.0vw;
-    --h1_l: 10.0vw;
-    --h1_xl: 9.0rem;
+    --h1_s: 18.0vw;
+    --h1_m: 16.0vw;
+    --h1_l: 16.0vw;
+    --h1_xl: 16.0rem;
 
     --h2_s: 10.0vw;
     --h2_m: 10.0vw;
@@ -32,12 +32,12 @@
     --p_xl: 2.0rem;
 
     --headline_text_s: 5.5vw;
-    --headline_text_m: 6vw;
+    --headline_text_m: 5.5vw;
     --headline_text_l: 4vw;
     --headline_text_xl: 64px;
 
 
-    --border-radius: min(3vw, 32px);
+    --border-radius: max(0.2vw, 24px);
 
     --shadow_inner_blur: 64px;
     --shadow_outer_blur: 8px;
@@ -288,7 +288,7 @@ p {
 }
 
 .subtitle {
-    color: #f0efeb44;
+    color: #f0efeb88;
     font-size: 4.0vw;
 }
 
