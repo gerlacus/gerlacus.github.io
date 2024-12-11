@@ -1,7 +1,7 @@
 /* First ensure that all HTML elements have the box-sizing property set to border-box. This makes sure that the padding and border are included in the total width and height of the elements. */
 * {
     box-sizing: border-box;
-    /* border: 1px dashed red; */
+    border: 1px dashed red;
 }
 
 :root {
@@ -69,6 +69,10 @@
     --column_padding: 32px;
     --column_padding_s: 8px;
 
+    --glass_first_margin: 30vh;
+    --glass_last_margin: 30vh;
+    --glass_middle_margin: 10vh;
+
     --col_text: #f0eff0;
     --col_text_transparent: #f0efeb44;
     --col_text_shadow: #181d1630;
@@ -125,13 +129,22 @@ canvas {
     box-shadow: inset 0px 0px 50px var(--col_shadow_glass_inner), 0px 0px 50px var(--col_shadow_glass_outer);
     border-radius: var(--border-radius);
     height: max-content;
-    margin: 8rem auto;
+    margin: 10vh auto;
+    width: 100%;
+}
+
+.glass-first {
+    margin-top: var(--glass_first_margin);
+}
+
+.glass-last {
+    margin-bottom: var(--glass_last_margin);
 }
 
 .row {
     margin: var(--row_padding_s);
     padding: var(--row_s);
-    max-width: var(--max_width);
+    /* max-width: var(--max_width); */
     border: 1px solid var(--col_text_transparent);
     border-radius: var(--border-radius_s);
     box-shadow:  0px 4px var(--shadow_outer_blur) var(--col_shadow_outer);
@@ -201,7 +214,6 @@ mix-blend-mode: hard-light;
 [class*="col-"] {
     width: 100%;
 }
-
 
 .row-audio {
     border-radius: min(2vw, 4px);    
@@ -356,7 +368,8 @@ a {
 }
 
 #bg {
-    display: flex;
+    display: table;
+    width: 100%;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -392,7 +405,7 @@ hr {
     a {font-size: var(--a_m);}
     .subtitle { font-size: 2.0vw;}
     .portrait { aspect-ratio: 1.0; height: var(--headline_height_m); background-position: 60% 20%;}
-    .glass {margin: 16.0rem auto; border-radius: var(--border-radius);}
+    .glass {border-radius: var(--border-radius);}
     .headline-text { font-size: var(--headline_text_m);}
     #bg {box-shadow: inset var(--bg_fade_m) 0px var(--bg_fade_m) var(--col_bg_fade_m),
         inset calc(0px - var(--bg_fade_m)) 0px var(--bg_fade_m) var(--col_bg_fade_m);}
@@ -421,7 +434,7 @@ h4 {font-size: var(--h4_l);}
 p {font-size: var(--p_l);}
 a {font-size: var(--a_l);}
 .portrait { aspect-ratio: 1.0; height: var(--headline_height_l);}
-.glass {margin: 24.0rem auto; max-width: var(--max_width_glass);}
+.glass {max-width: var(--max_width_glass);}
 .headline-text { font-size: var(--headline_text_l);}
 #bg {box-shadow: inset var(--bg_fade_l) 0px var(--bg_fade_l) var(--col_bg_fade_l), inset calc(0px - var(--bg_fade_l)) 0px var(--bg_fade_l) var(--col_bg_fade_l);}
 #div-listen { max-width: 50em; margin: auto; }
@@ -431,7 +444,7 @@ a {font-size: var(--a_l);}
 
 /* Beyond */
 @media only screen and (min-width: 1573px) {
-    .glass {margin: 32.0rem auto; max-width: var(--max_width_glass);}
+    .glass {max-width: var(--max_width_glass);}
     #bg {max-width: 1573px; margin: auto; box-shadow: 
         inset var(--bg_fade_xl) var(--bg_fade_xl) var(--bg_fade_xl) var(--col_bg_fade_xl),
         inset calc(0px - var(--bg_fade_xl)) calc(0px - var(--bg_fade_xl)) var(--bg_fade_xl) var(--col_bg_fade_xl),
