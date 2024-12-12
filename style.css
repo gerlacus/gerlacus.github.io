@@ -374,7 +374,8 @@ p {
 }
 
 .btn-email:hover {
-    background: var(--col_accent_bright_transparent);
+    /* background: var(--col_accent_bright_transparent); */
+    background: var(--col_primary_transparent);
     transition: background 0.5s;
 }
 
