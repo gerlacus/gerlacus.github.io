@@ -1,7 +1,7 @@
 /* First ensure that all HTML elements have the box-sizing property set to border-box. This makes sure that the padding and border are included in the total width and height of the elements. */
 * {
     box-sizing: border-box;
-    border: 1px dashed red;
+    /* border: 1px dashed red; */
 }
 
 :root {
@@ -41,7 +41,6 @@
     --headline_text_l: 3rem;
     --headline_text_xl: 3rem;
 
-
     --border-radius: max(0.2vw, 24px);
     --border-radius_s: 24px;
 
@@ -73,10 +72,22 @@
     --glass_last_margin: 30vh;
     --glass_middle_margin: 10vh;
 
+    --col_card_hover: #ffffff11;
+
+    --card_header_margin_s: 0.5rem;
+    --card_header_margin_m: 0.5rem;
+    --card_header_margin_l: 0.5rem;
+    --card_header_margin_xl: 0.5rem;
+
+    --pitch_header_margin_s: 0.5rem;
+    --pitch_header_margin_m: 0.5rem;
+    --pitch_header_margin_l: 0.5rem;
+    --pitch_header_margin_xl: 0.5rem;
+
     --col_text: #f0eff0;
     --col_text_transparent: #f0efeb44;
     --col_text_shadow: #181d1630;
-    --col_hypertext: #d8d8d8;
+    --col_hypertext: #ffffff;
     --col_background: #181d16;
     --col_primary: #c99d5e;
     --col_primary_transparent: rgba(255, 191, 99, 0.733);
@@ -98,6 +109,8 @@
     --col_bg_fade_xl: #ffffff; /* #857b84 */
     /* --col_bg_fade_xl: rgb(240, 234, 228); */
     /* --col_bg_fade_xl: rgb(240, 0, 0); */
+
+    scroll-behavior: smooth;
 }
 
 
@@ -162,12 +175,38 @@ canvas {
     height: var(--headline_height_s);
     aspect-ratio: 0.2;
     border-radius: var(--border-radius);
-    border: 1px solid var(--col_text_transparent);
+    border: 1px solid var(--col_primary_bright);
     background: url('img/portrait1.jpg');
     background-repeat: no-repeat;
     box-shadow: inset 0px 0px var(--shadow_inner_blur) var(--col_shadow_inner), 0px 4px var(--shadow_outer_blur) var(--col_shadow_outer);
     background-size: cover;
     background-position: 60% 20%;
+}
+
+.outer-portrait
+{
+    padding: 0vw;
+}
+
+.portrait:hover {
+    background: url('img/portrait3.jpg');
+    background-size: cover;
+}
+
+.card-header {
+    /* u r d l */
+    margin: var(--card_header_margin_s) var(--card_header_margin_s) 0px var(--card_header_margin_s);
+}
+
+.card {
+    background: transparent;
+    transition: background 0.5s;
+}
+
+.card:hover {
+    background: var(--col_card_hover);
+    /* box-shadow: inset 0px 0px 24px var(--col_bg_fade_s); */
+    transition: background 0.5s;
 }
 
 /* Music player components*/
@@ -251,7 +290,13 @@ h1 {
   font-size: var(--h1_s);
   text-align: center;
   text-shadow: 0px 0px 160px var(--col_primary_bright),
-  0px 0px 320px white;
+    0px 0px 320px white;
+  transition: color 0.5s;
+}
+
+h1:hover {
+    transition: color 0.5s;
+    color: var(--col_accent_bright);
 }
 
 h2 {
@@ -303,7 +348,7 @@ p {
     text-align: center;
 }
 
-a {
+.btn-email {
     font-size: var(--a_s);
     font-family: "Reenie Beanie", cursive;
     font-weight: 300;
@@ -322,6 +367,12 @@ a {
     /* margin: 10rem 20% 3rem 20%; */
     margin: 5rem auto 4rem auto;
     display: table;
+    transition: background 0.5s;
+}
+
+.btn-email:hover {
+    background: var(--col_accent_bright_transparent);
+    transition: background 0.5s;
 }
 
 .subtitle {
@@ -329,9 +380,20 @@ a {
     font-size: 4.0vw;
 }
 
+.outside-glass {
+    margin: var(--row_padding);
+    text-shadow: 0px 0px 12px black;
+    /* font-weight: 500; */
+    color: white;
+}
+
+a {
+    color: var(--col_hypertext);
+}
+
 .pitch {
     text-align: right;
-    padding: 4px;
+    margin: 0px var(--pitch_header_margin_s) var(--pitch_header_margin_s) var(--pitch_header_margin_s);
 }
 
 /* .quicksand-light {
@@ -402,8 +464,8 @@ hr {
     h3 {font-size: var(--h3_m);}
     h4 {font-size: var(--h4_m);}
     p {font-size: var(--p_m);}
-    a {font-size: var(--a_m);}
-    .subtitle { font-size: 2.0vw;}
+    .btn-email {font-size: var(--a_m);}
+    .subtitle { font-size: 3.0vw;}
     .portrait { aspect-ratio: 1.0; height: var(--headline_height_m); background-position: 60% 20%;}
     .glass {border-radius: var(--border-radius);}
     .headline-text { font-size: var(--headline_text_m);}
@@ -411,6 +473,9 @@ hr {
         inset calc(0px - var(--bg_fade_m)) 0px var(--bg_fade_m) var(--col_bg_fade_m);}
     .row {border-radius: var(--border-radius); margin: var(--row_padding); padding: var(--row_padding);}
     .row-audio {margin: 0px;}
+    .card-header {margin: var(--card_header_margin_m) var(--card_header_margin_m) 0px var(--card_header_margin_m);}
+    .pitch {text-align: left; margin: 0px var(--pitch_header_margin_m) var(--pitch_header_margin_m) var(--pitch_header_margin_m);}
+    .outer-portrait { padding: 0rem; }
 }
 
 /* Desktop */
@@ -432,7 +497,7 @@ h2 {font-size: var(--h2_l);}
 h3 {font-size: var(--h3_l);}
 h4 {font-size: var(--h4_l);}
 p {font-size: var(--p_l);}
-a {font-size: var(--a_l);}
+.btn-email {font-size: var(--a_l);}
 .portrait { aspect-ratio: 1.0; height: var(--headline_height_l);}
 .glass {max-width: var(--max_width_glass);}
 .headline-text { font-size: var(--headline_text_l);}
@@ -456,7 +521,7 @@ a {font-size: var(--a_l);}
     h3 {font-size: var(--h3_xl);}
     h4 {font-size: var(--h4_xl);}
     p {font-size: var(--p_xl);}
-    a {font-size: var(--a_xl);}
+    .btn-email {font-size: var(--a_xl);}
     .headline-text {font-size: var(--headline_text_xl);}
     #div-listen { max-width: 50em; margin: auto; }
     .subtitle { font-size: 2rem;}
