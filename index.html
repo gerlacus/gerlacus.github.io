@@ -14,7 +14,7 @@
 
 <body id="body">
     <div id="bg">
-        <div class="glass glass-first">
+        <div class="glass glass-first" id="intro">
             <div class="row card">
                 <div class="col-12 col-s-12">
                     <h2>call me 'Max'.</h2>
@@ -41,27 +41,31 @@
                 </div>
                 <div class="col-12 s-col-12">
                     <p class="headline-text">to elevate worlds</p>
-                    <p class="headline-text style=" style="line-height: 30rem;">and the stories within them.</p>
+                    <p class="headline-text style=" style="line-height: 10rem;">and the stories within them.</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 s-col-12">
-                    <div id="div-listen-glow">
-                        <div id="div-listen" style="margin-bottom: 9%;">
-                            <canvas id="oscilloscope"></canvas>
+        </div>
+            <div class="glass">
+                <div class="row">
+                    <div class="col-12 s-col-12">
+                        <div id="div-listen-glow">
+                            <div id="div-listen" style="margin-bottom: 9%;">
+                                <canvas id="oscilloscope"></canvas>
+                            </div>
                         </div>
+                        <h3 style="margin: 0 0 2rem 0; font-weight: 700;">Here's some air I've wiggled.</h3>
+                        <div class="row row-audio">
+                            <audio class="audio" id="audio" src="mus/20241126_Reel3.mp3" crossorigin="anonymous"
+                                onplay="handleOscilloscopeStart()" controls="controls">Your browser does not support these
+                                audio elements.</audio>
+                            </audio>
+                        </div>
+                        <p class="subtitle">and a silly little visualizer I've put together for said air.</p>
+                        <p class="subtitle">(I won't be offended if you skip around! your time is valuable to me.)</p>
                     </div>
-                    <h3 style="margin: 0 0 2rem 0; font-weight: 700;">Here's some air I've wiggled.</h3>
-                    <div class="row row-audio">
-                        <audio class="audio" id="audio" src="mus/20241126_Reel3.mp3" crossorigin="anonymous"
-                            onplay="handleOscilloscopeStart()" controls="controls">Your browser does not support these
-                            audio elements.</audio>
-                        </audio>
-                    </div>
-                    <p class="subtitle">and a silly little visualizer I've put together for said air.</p>
-                    <p class="subtitle">(I won't be offended if you skip around! your time is valuable to me.)</p>
                 </div>
             </div>
+        <div class="glass">
             <div class="row">
                 <h3 style="margin-bottom: 5%;">SPECIALTIES</h3>
                 <hr style="width: 50%; margin:0% auto 5% auto;" />
@@ -101,7 +105,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+        </div>
+        <div class="glass">
+            <div class="row" id="contact">
                 <div class="col-12 col-s-12">
                     <h2>let's get to know
                         <h2>each other!</h2>
@@ -114,6 +120,7 @@
                 </div>
             </div>
         </div>
+        
         <p class="subtitle outside-glass">...or maybe you'd like to <a href= "#about">learn a little more about me</a> first?</p>
         <div class="glass glass-last" id="about">
             <div class="row">
@@ -161,6 +168,7 @@
                 </div>
             </div>
         </div>
+        <p class="subtitle outside-glass" style="margin-bottom: 15vh;">that's all for now! <a href= "#contact">contact me</a> | <a href= "#intro">start over</a></p>
     </div>
 </body>
 
