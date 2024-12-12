@@ -18,8 +18,8 @@
 
     --h3_s: 4.8vw;
     --h3_m: 4.8vw;
-    --h3_l: 2.5rem;
-    --h3_xl: 2.5rem;
+    --h3_l: 3.0rem;
+    --h3_xl: 3.0rem;
 
     --h4_s: 5.0vw;
     --h4_m: 4.0vw;
@@ -54,6 +54,8 @@
     --btn_listen_height_s: 50vw;
     --btn_listen_height_m: 50vw;
     --btn_listen_height_l: min(70vw, 300px);
+
+    --col_oscilloscope_transparent: rgba(240, 239, 235, 0.06);
 
     --max_width: 860px;
     --max_width_glass: 1050px;
@@ -90,9 +92,9 @@
     --col_hypertext: #ffffff;
     --col_background: #181d16;
     --col_primary: #c99d5e;
-    --col_primary_transparent: rgba(255, 191, 99, 0.733);
-    --col_secondary: #6ca2a3;
-    --col_secondary_transparent: #a4fdffbb;
+    --col_primary_transparent: rgba(255, 191, 99, 0.2);
+    --col_secondary: rgb(108, 162, 163);
+    --col_secondary_transparent: rgba(164, 253, 255, 0.5);
     --col_accent: #73a07f;
     --col_primary_bright: #ffbf63;
     --col_secondary_bright: #a4fdff;
@@ -178,7 +180,8 @@ canvas {
     border: 1px solid var(--col_primary_bright);
     background: url('img/portrait1.jpg');
     background-repeat: no-repeat;
-    box-shadow: inset 0px 0px var(--shadow_inner_blur) var(--col_shadow_inner), 0px 4px var(--shadow_outer_blur) var(--col_shadow_outer);
+    box-shadow: inset 0px 0px var(--shadow_inner_blur) var(--col_shadow_inner),
+        0px 4px var(--shadow_outer_blur) var(--col_shadow_outer);
     background-size: cover;
     background-position: 60% 20%;
 }
@@ -219,11 +222,12 @@ audio {
 #div-listen {
     width: 100%;
     height: 100%;
-    /* background-image: linear-gradient(20deg, var(--col_primary_transparent), var(--col_secondary_transparent)); */
-    background-image: linear-gradient(20deg, var(--col_secondary_transparent), var(--col_accent_bright_transparent));
+    background-image: linear-gradient(20deg, var(--col_primary_transparent), var(--col_secondary_transparent));
+    /* background-image: linear-gradient(20deg, var(--col_secondary_transparent), var(--col_accent_bright_transparent)); */
     -webkit-text-stroke: 1px var(--col_primary_bright);
     border-radius: var(--border-radius);
-    box-shadow: inset 0px 0px var(--shadow_inner_blur) var(--col_primary_transparent), 0px 4px var(--shadow_outer_blur) var(--col_shadow_outer);
+    box-shadow: inset 0px 0px var(--shadow_inner_blur) var(--col_primary_transparent),
+        0px 4px var(--shadow_outer_blur) var(--col_shadow_outer);
     border: 1px solid var(--col_primary_bright)
 }
 
@@ -241,12 +245,12 @@ audio {
 width: 90%;
 height: 90%;
 margin: 5%;
-box-shadow: inset 40px 0px 80px var(--col_text_transparent),
-    inset -40px 0px 80px var(--col_text_transparent),
-    inset 16px 0px 16px var(--col_text_transparent),
-    inset -16px 0px 16px var(--col_text_transparent);
+box-shadow: inset 40px 0px 80px var(--col_oscilloscope_transparent),
+    inset -40px 0px 80px var(--col_oscilloscope_transparent),
+    inset 16px 0px 16px var(--col_oscilloscope_transparent),
+    inset -16px 0px 16px var(--col_oscilloscope_transparent);
 border-radius: var(--border-radius);
-mix-blend-mode: hard-light;
+/* mix-blend-mode:overlay; */
 }
 
 /* Mobile */
@@ -375,7 +379,7 @@ p {
 }
 
 .subtitle {
-    color: #f0efebdf;
+    color: var(--col_text);
     font-size: 4.0vw;
 }
 
@@ -383,7 +387,6 @@ p {
     margin: var(--row_padding);
     text-shadow: 1px 1px 8px black,
     -1px -1px 8px black;
-    /* font-weight: 500; */
     color: white;
 }
 

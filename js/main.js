@@ -85,13 +85,13 @@ function handleOscilloscopeStart()
     var strokeStyle;
     var alpha = 0.0;
 
-    var totalWaveform = 0;
+    // var totalWaveform = 0;
 
     for (let i = 0; i < waveform.length; i++) {
       var x = i;
       var y = ((1.0 + ((waveform[i]))) * (oscCanvas.height * 0.5));
 
-      totalWaveform += waveform[i];
+      // totalWaveform += waveform[i];
 
       if (i === 0) {
         canvasContext.moveTo(x, y);
@@ -107,15 +107,17 @@ function handleOscilloscopeStart()
       }
     }
 
-    var averageWaveform = totalWaveform / waveform.length;
+    // var averageWaveform = totalWaveform / waveform.length;
 
-    let r_val = (alpha * 55) + 150;
-    let g_val = (alpha * 200) + 80;
-    let b_val = (alpha * 100) + 120;
+    // let r_val = (alpha * 55) + 150;
+    // let g_val = (alpha * 200) + 80;
+    // let b_val = (alpha * 100) + 120;
 
-    strokeStyle = 'rgba(' + r_val + ', ' + g_val + ', ' + b_val + ', ' + alpha + ')';
+    // strokeStyle = 'rgba(' + r_val + ', ' + g_val + ', ' + b_val + ', ' + alpha + ')';
 
-    updateDivListenGlow(255, 191, 99, alpha * 0.5);
+    updateDivListenGlow(255, 191, 99, 0.2 + (alpha * 0.5));
+
+    strokeStyle = 'rgba(200, 250, 252, 0.9)';
 
     canvasContext.strokeStyle = strokeStyle;
     canvasContext.stroke();
