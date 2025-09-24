@@ -1,4 +1,4 @@
-// PARALLAX SCROLLING
+/* // PARALLAX SCROLLING
 
 function scrollBg() {
     var scrolltotop = document.scrollingElement.scrollTop;
@@ -8,6 +8,14 @@ function scrollBg() {
     var factor = -0.5;
     var yvalue = offset + (scrolltotop * factor);
     target.style.backgroundPosition = xvalue + " " + yvalue + "px";
+  }
+    */
+
+  function scrollBg() {
+    var scrollTop = document.scrollingElement.scrollTop; 
+    var target = document.getElementById("bg");
+    var yvalue = scrollTop * (0.3);
+    target.style.backgroundPosition = "center " + yvalue + "px";
   }
 
 document.getElementById("body").onscroll = scrollBg;
@@ -83,7 +91,11 @@ function handleOscilloscopeStart()
     canvasContext.beginPath();
 
     var strokeStyle;
+    // var lineWidth;
     var alpha = 0.0;
+    var strokeR;
+    var strokeG;
+    var strokeB;
 
     // var totalWaveform = 0;
 
@@ -96,12 +108,14 @@ function handleOscilloscopeStart()
       if (i === 0) {
         canvasContext.moveTo(x, y);
       } else {
-        var lineWidth = Math.cos(x*6.28/waveform.length) + (Math.abs(y) * 0.05);
-        alpha = Math.pow(Math.abs(waveform[i]), 0.2) + 0.1;
+        var lineWidth = Math.cos(x*3.14/waveform.length) + (Math.abs(y) * 0.05);
+
+        // strokeR = Math.pow(Math.abs(waveform[i], 0.2));
+        alpha = Math.pow(Math.abs(waveform[i]), 0.2) + 0.01;
 
         canvasContext.lineWidth = lineWidth;
-      
-        
+
+        // strokeStyle = 'rgba(' + strokeR + ', 250, 252, 0.9)';
 
         canvasContext.lineTo(x, y);
       }
@@ -109,15 +123,15 @@ function handleOscilloscopeStart()
 
     // var averageWaveform = totalWaveform / waveform.length;
 
-    // let r_val = (alpha * 55) + 150;
-    // let g_val = (alpha * 200) + 80;
-    // let b_val = (alpha * 100) + 120;
+    let r_val = (alpha * 55) + 150;
+    let g_val = (alpha * 200) + 80;
+    let b_val = (alpha * 100) + 120;
 
-    // strokeStyle = 'rgba(' + r_val + ', ' + g_val + ', ' + b_val + ', ' + alpha + ')';
+    strokeStyle = 'rgba(' + r_val + ', ' + g_val + ', ' + b_val + ', ' + alpha + ')';
 
     updateDivListenGlow(255, 191, 99, 0.2 + (alpha * 0.5));
 
-    strokeStyle = 'rgba(200, 250, 252, 0.9)';
+    // strokeStyle = 'rgba(200, 250, 252, 0.9)';
 
     canvasContext.strokeStyle = strokeStyle;
     canvasContext.stroke();
