@@ -75,8 +75,9 @@
     --glass_last_margin: 15vh;
     --glass_middle_margin: 10vh;
 
-    /* --col_card_hover: #ffffff11; */
-    --col_card_hover: #ffffff11;
+    /* --col_card_hover: #00000011; */
+    /* --col_card_hover: #71310011; */
+    --col_card_hover: #cc210011;
 
     --card_header_margin_s: 0.5rem;
     --card_header_margin_m: 0.5rem;
@@ -124,13 +125,12 @@ body {
 }
 
 img {
-    image-rendering:optimizeSpeed;
+    image-rendering:pixelated;
 }
 
 html, body {
     background-color: var(--col_bg_fade_xl); /* Sets the background color for the entire viewport */
     margin: 0;
-    padding: 0;
     height: max-content;
     width: 100%;
     /* border: 1px dashed green; */
@@ -147,8 +147,9 @@ canvas {
     /* box-shadow: inset 0px 0px 50px var(--col_shadow_glass_inner), 0px 0px 50px var(--col_shadow_glass_outer); */
     border-radius: var(--border-radius_l);
     height: max-content;
+    /* margin: 10vh auto; */
     margin: 10vh auto;
-    width: 100%;
+    width: 90%;
     mix-blend-mode: exclusion;
 }
 
@@ -189,19 +190,22 @@ canvas {
 }
 
 .portrait {
-    width: 98%;
+    width: 100%;
     height: var(--headline_height_s);
     aspect-ratio: 0.2;
-    border-radius: var(--border-radius_s);
-    border: 1px solid var(--col_primary_bright);
+    border-radius: var(--border-radius);
+    /* border: 1px solid var(--col_primary_bright); */
     background: url('img/portrait1.jpg');
     background-repeat: no-repeat;
     /* box-shadow: inset 0px 0px var(--shadow_inner_blur) var(--col_shadow_inner),
         0px 4px var(--shadow_outer_blur) var(--col_shadow_outer); */
-    background-size: cover;
-    background-position: 60% 20%;
-    margin: 1%;
+    background-size: 180%;
+    background-position: 70% 25%;
+    /* margin: 1%; */
+    filter: brightness(1.5) contrast(130%) saturate(0.6) invert();
+    /* mix-blend-mode:multiply; */
     mix-blend-mode:hard-light;
+    /* mix-blend-mode:exclusion; */
     /* filter: contrast(500%); */
 
 }
@@ -214,6 +218,8 @@ canvas {
 .portrait:hover {
     background: url('img/portrait3.jpg');
     background-size: cover;
+    /* background-size: 170%;
+    background-position: 10% 10%; */
 }
 
 .card-header {
@@ -242,16 +248,18 @@ audio {
 }
 
 #div-listen {
+    margin: auto;
     width: 100%;
     height: 100%;
     /* background-image: linear-gradient(20deg, var(--col_primary_transparent), var(--col_secondary_transparent)); */
     /* background-image: linear-gradient(20deg, var(--col_secondary_transparent), var(--col_accent_bright_transparent)); */
-    -webkit-text-stroke: 1px var(--col_primary_bright);
     border-radius: var(--border-radius_s);
     /* box-shadow: inset 0px 0px var(--shadow_inner_blur) var(--col_primary_transparent),
         0px 4px var(--shadow_outer_blur) var(--col_shadow_outer); */
-    border: 1px solid var(--col_primary_bright);
+    /* border: 1px solid var(--col_primary_bright); */
+    border: 1px solid black;
     /* filter: contrast(500%) brightness(0.8); */
+    filter: brightness(0.1) saturate(40.0);
 }
 
 #div-listen-glow
@@ -285,7 +293,7 @@ filter:contrast(500%);
 }
 
 .row-audio {
-    border-radius: min(2vw, 4px);    
+    /* border-radius: min(2vw, 4px);     */
     padding: 0px;
     margin-left: 0;
     margin-right: 0;
@@ -321,7 +329,6 @@ h1 {
   font-size: var(--h1_s);
   text-align: center;
   mix-blend-mode: exclusion;
-  filter: contrast(500%);
   /* text-shadow: 0px 0px 160px var(--col_primary_bright),
     0px 0px 320px white; */
   transition: color 0.5s;
@@ -344,7 +351,6 @@ h2 {
     color: #ffffffff;
     /* filter:invert(); */
     mix-blend-mode: exclusion;
-    filter: contrast(500%);
     /* -webkit-text-stroke: 2px #000000FF; */
     /* text-shadow: 0px 4px 4px var(--col_text_shadow); */
 }
@@ -361,7 +367,6 @@ h3 {
     /* color: var(--col_text); */
     color: #ffffffff;
     mix-blend-mode: exclusion;
-    filter: contrast(500%);
     /* -webkit-text-stroke: 2px #000000FF; */
     /* text-shadow: 0px 4px 4px var(--col_text_shadow); */
 }
@@ -378,7 +383,6 @@ h4
     /* color: var(--col_text); */
     color: #ffffffff;
     mix-blend-mode: exclusion;
-    filter: contrast(500%);
     /* text-shadow: 0px 4px 4px var(--col_text_shadow); */
 }
 
@@ -391,7 +395,6 @@ p {
     /* color: var(--col_text); */
     color: #ffffffff;
     mix-blend-mode: exclusion;
-    filter: contrast(500%);
     /* text-shadow: 0px 0px 32px var(--col_text_shadow); */
     text-align: center;
 }
@@ -407,7 +410,6 @@ p {
     /* color: var(--col_hypertext); */
     color: #ffffffff;
     mix-blend-mode: exclusion;
-    filter: contrast(500%);
     padding: 0.5rem 1.5rem 1.0rem 1.5rem;
     max-width: var(--max_width);
     border: 1px solid var(--col_text_transparent);
@@ -418,12 +420,18 @@ p {
     margin: 3rem auto 2rem auto;
     display: table;
     transition: background 0.5s;
+    text-decoration: none;
+    border: 1px solid #00000000;
+    mix-blend-mode: exclusion;
 }
 
 .btn-email:hover {
     /* background: var(--col_accent_bright_transparent); */
     background: var(--col_primary_transparent);
+    border-color: white;
     transition: background 0.5s;
+    mix-blend-mode: exclusion;
+    
 }
 
 .subtitle {
@@ -490,7 +498,7 @@ a {
     background-image: url('img/bg1.jpg');
     /* box-shadow: inset var(--bg_fade_s) var(--bg_fade_s) var(--bg_fade_s) var(--col_bg_fade_s), inset calc(0px - var(--bg_fade_s)) calc(0px - var(--bg_fade_s)) var(--bg_fade_s) var(--col_bg_fade_s); */
     background-position-x: center;
-    filter: invert();
+    filter: invert() saturate(1.1) contrast(1.2) hue-rotate(-5deg);
 }
 
 hr {
@@ -519,7 +527,7 @@ hr {
     p {font-size: var(--p_m);}
     .btn-email {font-size: var(--a_m); margin: 5rem auto 3rem auto;}
     .subtitle { font-size: 3.0vw;}
-    .portrait { aspect-ratio: 1.0; height: var(--headline_height_m); background-position: 60% 20%;}
+    .portrait { aspect-ratio: 1.0; height: var(--headline_height_m); background-position: 60% 20%; background-size:150%;}
     .glass {border-radius: var(--border-radius_l);}
     .headline-text {font-size: var(--headline_text_m);}
     /* #bg {box-shadow: inset var(--bg_fade_m) 0px var(--bg_fade_m) var(--col_bg_fade_m),
@@ -551,7 +559,7 @@ h3 {font-size: var(--h3_l);}
 h4 {font-size: var(--h4_l);}
 p {font-size: var(--p_l);}
 .btn-email {font-size: var(--a_l);}
-.portrait { aspect-ratio: 1.0; height: var(--headline_height_l);}
+.portrait { aspect-ratio: 1.0; height: var(--headline_height_l); background-size: 110%;}
 .glass {max-width: var(--max_width_glass);}
 .headline-text { font-size: var(--headline_text_l);}
 /* #bg {box-shadow: inset var(--bg_fade_l) 0px var(--bg_fade_l) var(--col_bg_fade_l), inset calc(0px - var(--bg_fade_l)) 0px var(--bg_fade_l) var(--col_bg_fade_l);} */
