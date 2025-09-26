@@ -111,7 +111,8 @@ function handleOscilloscopeStart()
         var lineWidth = Math.cos(x*3.14/waveform.length) + (Math.abs(y) * 0.05);
 
         // strokeR = Math.pow(Math.abs(waveform[i], 0.2));
-        alpha = Math.pow(Math.abs(waveform[i]), 0.2) + 0.01;
+        // alpha = Math.pow(Math.abs(waveform[i]), 0.2) + 0.01;
+        alpha = 1.0;
 
         canvasContext.lineWidth = lineWidth;
 
@@ -123,9 +124,13 @@ function handleOscilloscopeStart()
 
     // var averageWaveform = totalWaveform / waveform.length;
 
-    let r_val = (alpha * 55) + 150;
-    let g_val = (alpha * 200) + 80;
-    let b_val = (alpha * 100) + 120;
+    // let r_val = (alpha * 55) + 150;
+    // let g_val = (alpha * 200) + 80;
+    // let b_val = (alpha * 100) + 120;
+
+    let r_val = 255;
+    let g_val = 255;
+    let b_val = 255;
 
     strokeStyle = 'rgba(' + r_val + ', ' + g_val + ', ' + b_val + ', ' + alpha + ')';
 
