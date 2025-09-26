@@ -89,7 +89,7 @@
     --pitch_header_margin_l: 0.5rem;
     --pitch_header_margin_xl: 0.5rem;
 
-    --col_text: #f0eff0;
+    --col_text: #ffffffff;
     --col_text_transparent: #000000ff; /* #f0efeb44; */
     --col_text_shadow: #181d1630;
     --col_hypertext: #ffffff;
@@ -202,7 +202,7 @@ canvas {
     background-size: 180%;
     background-position: 70% 25%;
     /* margin: 1%; */
-    filter: brightness(1.5) contrast(130%) saturate(0.6) invert();
+    /* filter: brightness(1.3) contrast(120%) saturate(0.6) invert(); */
     /* mix-blend-mode:multiply; */
     mix-blend-mode:hard-light;
     /* mix-blend-mode:exclusion; */
@@ -225,8 +225,8 @@ canvas {
 .card-header {
     /* u r d l */
     margin: var(--card_header_margin_s) var(--card_header_margin_s) 0px var(--card_header_margin_s);
-    -webkit-text-stroke: var(--col_text_shadow);
-    -webkit-text-stroke-width: 2px;
+    /* -webkit-text-stroke: var(--col_text_shadow);
+    -webkit-text-stroke-width: 2px; */
 }
 
 .card {
@@ -248,8 +248,8 @@ audio {
 }
 
 #div-listen {
-    margin: auto;
-    width: 100%;
+    margin: 4%;
+    width: 92%;
     height: 100%;
     /* background-image: linear-gradient(20deg, var(--col_primary_transparent), var(--col_secondary_transparent)); */
     /* background-image: linear-gradient(20deg, var(--col_secondary_transparent), var(--col_accent_bright_transparent)); */
@@ -532,6 +532,7 @@ hr {
     .headline-text {font-size: var(--headline_text_m);}
     /* #bg {box-shadow: inset var(--bg_fade_m) 0px var(--bg_fade_m) var(--col_bg_fade_m),
         inset calc(0px - var(--bg_fade_m)) 0px var(--bg_fade_m) var(--col_bg_fade_m);} */
+    #div-listen { max-width: var(--max_width_glass); margin: auto; width: 100%;}
     .row {border-radius: var(--border-radius); margin: var(--row_padding); padding: var(--row_padding);}
     .row-audio {margin: 0px;}
     .card-header {margin: var(--card_header_margin_m) var(--card_header_margin_m) 0px var(--card_header_margin_m);}
@@ -563,7 +564,7 @@ p {font-size: var(--p_l);}
 .glass {max-width: var(--max_width_glass);}
 .headline-text { font-size: var(--headline_text_l);}
 /* #bg {box-shadow: inset var(--bg_fade_l) 0px var(--bg_fade_l) var(--col_bg_fade_l), inset calc(0px - var(--bg_fade_l)) 0px var(--bg_fade_l) var(--col_bg_fade_l);} */
-#div-listen { max-width: var(--max_width_glass); margin: auto; }
+#div-listen { max-width: var(--max_width_glass); margin: auto; width: 100%;}
 .row-audio { max-width: 80em; margin: auto;}
 .subtitle { font-size: 1.9vw;}
 }
